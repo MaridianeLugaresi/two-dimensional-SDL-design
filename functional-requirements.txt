@@ -1,0 +1,9 @@
+
+    [] Criar classe e métodos para a conversão de graus para radianos
+    [] Criar classe e métodos para o círculo (rodas)
+    [] Criar classe e métodos para o retângulo, poderá especializar a Lines
+    [] Criar a classe e métodos Rotate
+    [] Criar uma classe Carro que fará o gerenciamento de todos os componentes
+    [] Criar uma classe Roda que poderá implementar a Rotação
+    [] Implementar a translação para mover o carro e todos seus componentes
+    []
