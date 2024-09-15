@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1726102259 source:c:\projetos\two-dimensional-sdl-design\main.cpp
+1726420149 source:c:\projetos\two-dimensional-sdl-design\main.cpp
 	<SDL2/SDL.h>
 	<stdio.h>
 	<stdlib.h>
@@ -420,17 +420,17 @@
 	<Color.h>
 	<SDL2/SDL.h>
 
-1726101620 source:c:\projetos\two-dimensional-sdl-design\src\color.cpp
+1726420149 source:c:\projetos\two-dimensional-sdl-design\src\color.cpp
 	"Color.h"
 	"Context.h"
 
-1726101838 source:c:\projetos\two-dimensional-sdl-design\src\context.cpp
+1726420149 source:c:\projetos\two-dimensional-sdl-design\src\context.cpp
 	"Context.h"
 
-1726101705 source:c:\projetos\two-dimensional-sdl-design\src\point.cpp
+1726420149 source:c:\projetos\two-dimensional-sdl-design\src\point.cpp
 	"Point.h"
 
-1726102269 source:c:\projetos\two-dimensional-sdl-design\src\line.cpp
+1726420149 source:c:\projetos\two-dimensional-sdl-design\src\line.cpp
 	"Line.h"
 	"Context.h"
 	<math.h>
