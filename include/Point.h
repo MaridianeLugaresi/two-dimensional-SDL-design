@@ -12,6 +12,7 @@ class Point
         void setX(int x);
         void setY(int y);
         virtual ~Point();
+        void Rotate(double degrees);
 
     protected:
 

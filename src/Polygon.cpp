@@ -28,8 +28,6 @@ void Polygon::draw() {
             line.end.setX(atual.getX());
             line.end.setY(atual.getY());
 
-            printf("Passei aqui X: %d Y: %d \n", p.getX(), p.getY());
-
             line.draw();
             anterior = atual;
         }
