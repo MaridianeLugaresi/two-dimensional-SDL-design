@@ -415,7 +415,7 @@
 1726420149 c:\projetos\two-dimensional-sdl-design\include\color.h
 	<SDL2/SDL.h>
 
-1726448892 c:\projetos\two-dimensional-sdl-design\include\point.h
+1726535022 c:\projetos\two-dimensional-sdl-design\include\point.h
 
 1726443943 c:\projetos\two-dimensional-sdl-design\include\line.h
 	<Point.h>
@@ -429,7 +429,7 @@
 1726420149 source:c:\projetos\two-dimensional-sdl-design\src\context.cpp
 	"Context.h"
 
-1726448892 source:c:\projetos\two-dimensional-sdl-design\src\point.cpp
+1726535003 source:c:\projetos\two-dimensional-sdl-design\src\point.cpp
 	"Point.h"
 	<Radians.h>
 	<cmath>
@@ -448,16 +448,16 @@
 1726424746 c:\projetos\two-dimensional-sdl-design\include\ramp.h
 	<Line.h>
 
-1726449209 source:c:\projetos\two-dimensional-sdl-design\src\car.cpp
+1726537405 source:c:\projetos\two-dimensional-sdl-design\src\car.cpp
 	"Car.h"
 	<Line.h>
 	<Point.h>
 	<Polygon.h>
 
-1726443309 c:\projetos\two-dimensional-sdl-design\include\car.h
+1726536660 c:\projetos\two-dimensional-sdl-design\include\car.h
 	<Point.h>
 
-1726446456 source:c:\projetos\two-dimensional-sdl-design\src\polygon.cpp
+1726535025 source:c:\projetos\two-dimensional-sdl-design\src\polygon.cpp
 	"Polygon.h"
 	<list>
 	<Line.h>
@@ -465,7 +465,7 @@
 	<Point.h>
 	<stdio.h>
 
-1726441955 c:\projetos\two-dimensional-sdl-design\include\polygon.h
+1726535017 c:\projetos\two-dimensional-sdl-design\include\polygon.h
 	<Point.h>
 	<Color.h>
 	<list>
