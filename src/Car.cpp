@@ -2,14 +2,16 @@
 #include<Line.h>
 #include<Point.h>
 #include<Polygon.h>
+#include<stdio.h>
 
 Car::Car()
 {
 
-    this->topLeftPoint = Point(200,300);
-    this->topRightPoint = Point(400,300);
-    this->bottomLeftPoint = Point(200,400);
-    this->bottomRightPoint = Point(400,400);
+    this->topLeftPoint = Point(topLeftPointX,topLeftPointY);
+    this->topRightPoint = Point(topRightPointX,topRightPointY);
+    this->bottomLeftPoint = Point(bottomLeftPointX,bottomLeftPointY);
+    this->bottomRightPoint = Point(bottomRightPointX,bottomRightPointY);
+    this->angleRotation = -30;
 
 }
 
@@ -17,18 +19,19 @@ void Car::draw() {
 
     Polygon body = Polygon(Color(0, 0, 0));
 
+
     this->topLeftPoint.Translation(this->topLeftPointX-this->topLeftPointX, this->topLeftPointY-this->topLeftPointY);
     this->topRightPoint.Translation(this->topRightPointX-this->topLeftPointX, this->topRightPointY-this->topRightPointY);
     this->bottomLeftPoint.Translation(this->bottomLeftPointX-this->bottomLeftPointX, this->bottomLeftPointY-this->topLeftPointY);
     this->bottomRightPoint.Translation(this->bottomRightPointX-this->bottomLeftPointX, this->bottomRightPointY-this->topLeftPointY);
 
-    #TODO: rotação ao contrário
-    this->topLeftPoint.Rotate(30);
-    this->topRightPoint.Rotate(30);
-    this->bottomLeftPoint.Rotate(30);
-    this->bottomRightPoint.Rotate(30);
 
-    #TODO: revisar cálculo
+    this->topLeftPoint.Rotate(this->angleRotation);
+    this->topRightPoint.Rotate(this->angleRotation);
+    this->bottomLeftPoint.Rotate(this->angleRotation);
+    this->bottomRightPoint.Rotate(this->angleRotation);
+
+
     this->topLeftPoint.Translation(this->topLeftPoint.getX() + this->topLeftPointX, this->topLeftPoint.getY() + this->topLeftPointY);
     this->topRightPoint.Translation(this->topRightPoint.getX() + this->topRightPointX, this->topRightPoint.getY() + this->topRightPointY);
     this->bottomLeftPoint.Translation(this->bottomLeftPoint.getX() + this->bottomLeftPointX, this->bottomLeftPoint.getY() + this->bottomLeftPointY);
@@ -45,4 +48,16 @@ void Car::draw() {
 Car::~Car()
 {
     //dtor
+}
+
+void Car::updatePosition()
+{
+    this->topLeftPoint.setX((this->topLeftPoint.getX() - 2));
+    this->topLeftPoint.setY(this->topLeftPoint.getY() - 2);
+    this->topRightPoint.setX(this->topRightPoint.getX() - 2);
+    this->topRightPoint.setY(this->topRightPoint.getY() - 2);
+    this->bottomLeftPoint.setX(this->bottomLeftPoint.getX() - 2);
+    this->bottomLeftPoint.setY(this->bottomLeftPoint.getY() - 2);
+    this->bottomRightPoint.setX(this->bottomRightPoint.getX() - 2);
+    this->bottomRightPoint.setY(this->bottomRightPoint.getY() - 2);
 }

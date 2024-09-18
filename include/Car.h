@@ -8,6 +8,8 @@ class Car
         Car();
         virtual ~Car();
         void draw();
+        void updatePosition();
+
         static const int topLeftPointX = 200;
         static const int topLeftPointY = 300;
         static const int topRightPointX = 400;
@@ -17,14 +19,12 @@ class Car
         static const int bottomRightPointX = 400;
         static const int bottomRightPointY = 400;
 
-    protected:
+    private:
         Point topLeftPoint;
         Point topRightPoint;
         Point bottomLeftPoint;
         Point bottomRightPoint;
-
-    private:
-
+        int angleRotation;
 };
 
 #endif // CAR_H
