@@ -12,6 +12,8 @@
 #include<Color.h>
 #include<Point.h>
 #include<Line.h>
+#include<Ramp.h>
+#include<Car.h>
 
 // SDL stuff
 SDL_Window* pWindow = nullptr;
@@ -20,28 +22,14 @@ SDL_Surface * window_surface = nullptr;
 
 int offset = 10;
 
-void display()
+void display(Car car)
 {
 
-    Color color = Color(255,0,0);
+    Ramp ramp = Ramp();
+    ramp.draw();
 
-    Point p1 = Point(600-offset,400);
-    Point p2 = Point(10+offset,10);
-
-    Line l1 = Line(p1, p2, color);
-    l1.draw();
-
-    Point p3 = Point(600-offset,430);
-    Point p4 = Point(10+offset,40);
-
-    offset += 10;
-
-    if(offset > 500) {
-        offset = 0;
-    }
-
-    Line l2 = Line(p3, p4, color, 1);
-    l2.draw();
+    car.updatePosition();
+    car.draw();
 
 }
 
@@ -88,6 +76,8 @@ int main(int argc, char* args[])
 	else
 		return 1; // sdl could not initialize
 
+    Car car = Car();
+
 	while (1)
 	{
 
@@ -95,7 +85,7 @@ int main(int argc, char* args[])
         clear();
 
         // Realiza o desenho
-        display();
+        display(car);
 
         // Aguarda instantes
         usleep(100000);

@@ -1,4 +1,6 @@
 #include "Point.h"
+#include<Radians.h>
+#include<cmath>
 
 Point::Point()
 {
@@ -35,5 +37,23 @@ void Point::setX(int x)
 void Point::setY(int y)
 {
     this->y = y;
+}
+
+void Point::Translation(int X, int Y) {
+
+    this->setX(X);
+    this->setY(Y);
+
+}
+
+void Point::Rotate(double degrees) {
+
+    //p’(x,y) = p(x * cos(θ) - y * sin(θ), x * sin(θ) + y * cos(θ))
+
+    Radians radians = Radians(degrees).toRadians();
+
+    this->setX(this->getX() * cos(radians.degrees) - this->getY() * sin(radians.degrees));
+    this->setY(this->getX() * sin(radians.degrees) + this->getY() * cos(radians.degrees));
+
 }
 

@@ -13,12 +13,12 @@ class Line
         void setPixel(int x, int y, int r, int g, int b);
         void draw();
         virtual ~Line();
+        Point start;
+        Point end;
 
     protected:
 
     private:
-        Point start;
-        Point end;
         Color color;
         int antialias = 0;
         void setPixel(int x, int y, int r, int g, int b, int a);
