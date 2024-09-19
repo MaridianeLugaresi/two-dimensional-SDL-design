@@ -1,6 +1,7 @@
 #include "Point.h"
 #include<Radians.h>
 #include<cmath>
+#include<stdio.h>
 
 Point::Point()
 {
@@ -52,8 +53,14 @@ void Point::Rotate(double degrees) {
 
     Radians radians = Radians(degrees).toRadians();
 
-    this->setX(this->getX() * cos(radians.degrees) - this->getY() * sin(radians.degrees));
-    this->setY(this->getX() * sin(radians.degrees) + this->getY() * cos(radians.degrees));
+    int testeX = this->getX();
+    int testeY = this->getY();
+
+    this->setX(testeX * cos(radians.degrees) - testeY * sin(radians.degrees));
+    this->setY(testeX * sin(radians.degrees) + testeY * cos(radians.degrees));
+
+    printf("%d-%d\n", testeX, this->getX());
+    printf("%d-%d\n", testeY, this->getY());
 
 }
 

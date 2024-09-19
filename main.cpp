@@ -28,7 +28,7 @@ void display(Car car)
     Ramp ramp = Ramp();
     ramp.draw();
 
-    car.updatePosition();
+    //car.updatePosition();
     car.draw();
 
 }

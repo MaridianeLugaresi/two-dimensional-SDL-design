@@ -11,7 +11,7 @@ Car::Car()
     this->topRightPoint = Point(topRightPointX,topRightPointY);
     this->bottomLeftPoint = Point(bottomLeftPointX,bottomLeftPointY);
     this->bottomRightPoint = Point(bottomRightPointX,bottomRightPointY);
-    this->angleRotation = -30;
+    this->angleRotation = 30;
 
 }
 
@@ -19,23 +19,20 @@ void Car::draw() {
 
     Polygon body = Polygon(Color(0, 0, 0));
 
-
-    this->topLeftPoint.Translation(this->topLeftPointX-this->topLeftPointX, this->topLeftPointY-this->topLeftPointY);
-    this->topRightPoint.Translation(this->topRightPointX-this->topLeftPointX, this->topRightPointY-this->topRightPointY);
-    this->bottomLeftPoint.Translation(this->bottomLeftPointX-this->bottomLeftPointX, this->bottomLeftPointY-this->topLeftPointY);
-    this->bottomRightPoint.Translation(this->bottomRightPointX-this->bottomLeftPointX, this->bottomRightPointY-this->topLeftPointY);
-
+    this->topLeftPoint.Translation(this->topLeftPoint.getX() - this->topLeftPointX, this->topLeftPoint.getY() - this->topLeftPointY);
+    this->topRightPoint.Translation(this->topRightPoint.getX() - this->topLeftPointX, this->topRightPoint.getY() - this->topRightPointY);
+    this->bottomLeftPoint.Translation(this->bottomLeftPoint.getX() - this->bottomLeftPointX, this->bottomLeftPoint.getY() - this->topLeftPointY);
+    this->bottomRightPoint.Translation(this->bottomRightPoint.getX() - this->bottomLeftPointX, this->bottomRightPoint.getY() - this->topLeftPointY);
 
     this->topLeftPoint.Rotate(this->angleRotation);
     this->topRightPoint.Rotate(this->angleRotation);
     this->bottomLeftPoint.Rotate(this->angleRotation);
     this->bottomRightPoint.Rotate(this->angleRotation);
 
-
     this->topLeftPoint.Translation(this->topLeftPoint.getX() + this->topLeftPointX, this->topLeftPoint.getY() + this->topLeftPointY);
     this->topRightPoint.Translation(this->topRightPoint.getX() + this->topRightPointX, this->topRightPoint.getY() + this->topRightPointY);
     this->bottomLeftPoint.Translation(this->bottomLeftPoint.getX() + this->bottomLeftPointX, this->bottomLeftPoint.getY() + this->bottomLeftPointY);
-    this->bottomRightPoint.Translation(this->bottomRightPoint.getX() + this->bottomRightPointX, this->bottomRightPoint.getY() + this->topRightPointY);
+    this->bottomRightPoint.Translation(this->bottomRightPoint.getX() + this->bottomRightPointX, this->bottomRightPoint.getY() + this->bottomRightPointY);
 
     body.points.push_back(this->topLeftPoint);
     body.points.push_back(this->topRightPoint);
@@ -43,6 +40,7 @@ void Car::draw() {
     body.points.push_back(this->bottomLeftPoint);
 
     body.draw();
+
 }
 
 Car::~Car()
