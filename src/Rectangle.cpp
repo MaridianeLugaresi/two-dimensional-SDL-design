@@ -31,8 +31,6 @@ void Rectangle::rotate(int angleRotation, Point anchor)
     Line leftLine = this->left;
     Line rightLine = this->right;
 
-    printf("%d-%d\n", (infLine.start.getX() - infLine.start.getX()), (infLine.start.getY() - supLine.start.getY()));
-
     //MOVE PARA A ORIGEM
     this->superior.rotate(Point(supLine.start.getX() - supLine.start.getX(),
                                 supLine.start.getY() - supLine.start.getY()),
@@ -57,7 +55,26 @@ void Rectangle::rotate(int angleRotation, Point anchor)
                        Point(infLine.end.getX() - leftLine.end.getX(),
                              supLine.start.getY() - leftLine.end.getY()),
                        angleRotation);
-
+/*
     //MOVE NOVAMNTE PARA A ORIGEM
+    this->superior.translation(Point(this->superior.start.getX() + supLine.start.getX(),
+                                     this->superior.start.getY() + supLine.start.getY()),
+                               Point(this->superior.end.getX() + supLine.end.getX(),
+                                     this->superior.end.getY() + supLine.end.getY()));
 
+    this->inferior.translation(Point(this->inferior.start.getX() + infLine.start.getX(),
+                                     this->inferior.start.getY() + infLine.start.getY()),
+                               Point(this->inferior.end.getX() + infLine.end.getX(),
+                                     this->inferior.end.getY() + infLine.end.getY()));
+
+    this->left.translation(Point(this->left.start.getX() + leftLine.start.getX(),
+                                 this->left.start.getY() + leftLine.start.getY()),
+                           Point(this->left.end.getX() + leftLine.end.getX(),
+                                 this->left.end.getY() + leftLine.end.getY()));
+
+    this->right.translation(Point(this->right.start.getX() + rightLine.start.getX(),
+                                  this->right.start.getY() + rightLine.start.getY()),
+                            Point(this->right.end.getX() + rightLine.end.getX(),
+                                  this->right.end.getY() + rightLine.end.getY()));
+*/
 }

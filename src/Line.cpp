@@ -388,6 +388,12 @@ void Line::rotate(Point newStart, Point newEnd, int angleRotation)
     this->start.moveToOrigin(newStart.getX(), newStart.getY());
     this->end.moveToOrigin(newEnd.getX(), newEnd.getY());
 
-    //this->start.Rotate(angleRotation);
-    //this->end.Rotate(angleRotation);
+    this->start.Rotate(angleRotation);
+    this->end.Rotate(angleRotation);
+}
+
+void Line::translation(Point newStart, Point newEnd)
+{
+    this->start.Translation(newStart.getX(), newStart.getY());
+    this->end.Translation(newEnd.getX(), newEnd.getY());
 }

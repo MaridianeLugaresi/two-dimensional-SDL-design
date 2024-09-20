@@ -66,8 +66,5 @@ void Point::Rotate(double degrees) {
     this->setX(testeX * cos(radians.degrees) - testeY * sin(radians.degrees));
     this->setY(testeX * sin(radians.degrees) + testeY * cos(radians.degrees));
 
-    printf("%d-%d\n", testeX, this->getX());
-    printf("%d-%d\n", testeY, this->getY());
-
 }
 

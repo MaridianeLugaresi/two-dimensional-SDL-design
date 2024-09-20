@@ -16,6 +16,7 @@ class Line
         Point start;
         Point end;
         void rotate(Point newStart, Point newEnd, int angleRotation);
+        void translation(Point newStart, Point newEnd);
 
     protected:
 
