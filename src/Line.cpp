@@ -382,3 +382,12 @@ void Line::bresenham(int x1, int y1, int x2, int y2, int r, int g, int b)
         }
     }
 }
+
+void Line::rotate(Point newStart, Point newEnd, int angleRotation)
+{
+    this->start.moveToOrigin(newStart.getX(), newStart.getY());
+    this->end.moveToOrigin(newEnd.getX(), newEnd.getY());
+
+    //this->start.Rotate(angleRotation);
+    //this->end.Rotate(angleRotation);
+}

@@ -497,9 +497,9 @@
 1726420525 c:\projects\two-dimensional-sdl-design\include\color.h
 	<SDL2/SDL.h>
 
-1726839569 c:\projects\two-dimensional-sdl-design\include\point.h
+1726841284 c:\projects\two-dimensional-sdl-design\include\point.h
 
-1726838051 c:\projects\two-dimensional-sdl-design\include\line.h
+1726842441 c:\projects\two-dimensional-sdl-design\include\line.h
 	<Point.h>
 	<Color.h>
 	<SDL2/SDL.h>
@@ -510,7 +510,7 @@
 1726832700 c:\projects\two-dimensional-sdl-design\include\car.h
 	<Point.h>
 
-1726840004 source:c:\projects\two-dimensional-sdl-design\src\car.cpp
+1726842535 source:c:\projects\two-dimensional-sdl-design\src\car.cpp
 	"Car.h"
 	<Line.h>
 	<Point.h>
@@ -535,12 +535,12 @@
 1726420525 source:c:\projects\two-dimensional-sdl-design\src\context.cpp
 	"Context.h"
 
-1726839893 source:c:\projects\two-dimensional-sdl-design\src\line.cpp
+1726842571 source:c:\projects\two-dimensional-sdl-design\src\line.cpp
 	"Line.h"
 	"Context.h"
 	<math.h>
 
-1726791258 source:c:\projects\two-dimensional-sdl-design\src\point.cpp
+1726841268 source:c:\projects\two-dimensional-sdl-design\src\point.cpp
 	"Point.h"
 	<Radians.h>
 	<cmath>
@@ -565,9 +565,10 @@
 	<Line.h>
 	<Color.h>
 
-1726840021 source:c:\projects\two-dimensional-sdl-design\src\rectangle.cpp
+1726843861 source:c:\projects\two-dimensional-sdl-design\src\rectangle.cpp
 	"Rectangle.h"
 	<Line.h>
+	<stdio.h>
 
 1726840012 c:\projects\two-dimensional-sdl-design\include\rectangle.h
 	<Line.h>

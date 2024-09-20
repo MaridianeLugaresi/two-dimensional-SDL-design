@@ -47,6 +47,13 @@ void Point::Translation(int X, int Y) {
 
 }
 
+void Point::moveToOrigin(int X, int Y) {
+
+    this->setX(X);
+    this->setY(Y);
+
+}
+
 void Point::Rotate(double degrees) {
 
     //p’(x,y) = p(x * cos(θ) - y * sin(θ), x * sin(θ) + y * cos(θ))

@@ -12,6 +12,7 @@ class Point
         virtual ~Point();
         void Translation(int X, int Y);
         void Rotate(double degrees);
+        void moveToOrigin(int x, int y);
 
     protected:
 
