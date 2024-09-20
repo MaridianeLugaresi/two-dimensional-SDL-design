@@ -44,22 +44,24 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/Car.h" />
+		<Unit filename="include/Circle.h" />
 		<Unit filename="include/Color.h" />
 		<Unit filename="include/Context.h" />
 		<Unit filename="include/Line.h" />
 		<Unit filename="include/Point.h" />
-		<Unit filename="include/Polygon.h" />
 		<Unit filename="include/Radians.h" />
 		<Unit filename="include/Ramp.h" />
+		<Unit filename="include/Rectangle.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Car.cpp" />
+		<Unit filename="src/Circle.cpp" />
 		<Unit filename="src/Color.cpp" />
 		<Unit filename="src/Context.cpp" />
 		<Unit filename="src/Line.cpp" />
 		<Unit filename="src/Point.cpp" />
-		<Unit filename="src/Polygon.cpp" />
 		<Unit filename="src/Radians.cpp" />
 		<Unit filename="src/Ramp.cpp" />
+		<Unit filename="src/Rectangle.cpp" />
 		<Extensions />
 	</Project>
 </CodeBlocks_project_file>
