@@ -4,6 +4,7 @@
 #include<Polygon.h>
 #include<stdio.h>
 #include<Rectangle.h>
+#include<Circle.h>
 
 Car::Car()
 {
@@ -20,8 +21,6 @@ Car::~Car()
 
 void Car::draw() {
 
-    printf("DRAW: %d-%d\n", this->posX, this->posY);
-
     Rectangle body = Rectangle(Line(Point(this->posX, this->posY), Point(this->posX + 200, this->posY), Color(65,105,225), true),
                                Line(Point(this->posX, this->posY - 100), Point(this->posX + 200, this->posY - 100), Color(50,205,50), true),
                                Line(Point(this->posX, this->posY), Point(this->posX, this->posY - 100), Color(244,164,96), true),
@@ -30,6 +29,10 @@ void Car::draw() {
     body.rotate(this->angleRotation, Point(this->posX, this->posY));
 
     body.draw();
+
+    Circle circle;
+    circle.drawBresenhamCircle(this->posX + 90,this->posY + 70, 25);
+    circle.drawBresenhamCircle(this->posX + 200,this->posY + 10, 25);
 
 }
 
