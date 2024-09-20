@@ -29,7 +29,7 @@ void display(Car &car)
     ramp.draw();
 
     car.draw();
-    //car.updatePosition();
+    car.updatePosition();
 
 }
 

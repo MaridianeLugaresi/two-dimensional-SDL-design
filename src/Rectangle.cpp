@@ -1,6 +1,7 @@
 #include "Rectangle.h"
 #include<Line.h>
 #include<stdio.h>
+#include<Point.h>
 
 Rectangle::Rectangle(Line superior, Line inferior, Line left, Line right)
 {

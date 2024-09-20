@@ -475,7 +475,7 @@
 1726449867 source:c:\projetos\two-dimensional-sdl-design\src\radians.cpp
 	"Radians.h"
 
-1726833192 source:c:\projects\two-dimensional-sdl-design\main.cpp
+1726861971 source:c:\projects\two-dimensional-sdl-design\main.cpp
 	<SDL2/SDL.h>
 	<stdio.h>
 	<stdlib.h>
@@ -507,10 +507,10 @@
 1726445473 c:\projects\two-dimensional-sdl-design\include\ramp.h
 	<Line.h>
 
-1726832700 c:\projects\two-dimensional-sdl-design\include\car.h
+1726861400 c:\projects\two-dimensional-sdl-design\include\car.h
 	<Point.h>
 
-1726860289 source:c:\projects\two-dimensional-sdl-design\src\car.cpp
+1726867284 source:c:\projects\two-dimensional-sdl-design\src\car.cpp
 	"Car.h"
 	<Line.h>
 	<Point.h>
@@ -535,7 +535,7 @@
 1726420525 source:c:\projects\two-dimensional-sdl-design\src\context.cpp
 	"Context.h"
 
-1726855404 source:c:\projects\two-dimensional-sdl-design\src\line.cpp
+1726861180 source:c:\projects\two-dimensional-sdl-design\src\line.cpp
 	"Line.h"
 	"Context.h"
 	<math.h>
@@ -559,16 +559,17 @@
 1726530511 source:c:\projects\two-dimensional-sdl-design\src\radians.cpp
 	"Radians.h"
 
-1726622100 source:c:\projects\two-dimensional-sdl-design\src\ramp.cpp
+1726860755 source:c:\projects\two-dimensional-sdl-design\src\ramp.cpp
 	"Ramp.h"
 	<Point.h>
 	<Line.h>
 	<Color.h>
 
-1726860213 source:c:\projects\two-dimensional-sdl-design\src\rectangle.cpp
+1726862484 source:c:\projects\two-dimensional-sdl-design\src\rectangle.cpp
 	"Rectangle.h"
 	<Line.h>
 	<stdio.h>
+	<Point.h>
 
 1726840012 c:\projects\two-dimensional-sdl-design\include\rectangle.h
 	<Line.h>
