@@ -22,14 +22,14 @@ SDL_Surface * window_surface = nullptr;
 
 int offset = 10;
 
-void display(Car car)
+void display(Car &car)
 {
 
     Ramp ramp = Ramp();
     ramp.draw();
 
-    //car.updatePosition();
     car.draw();
+    //car.updatePosition();
 
 }
 

@@ -3,44 +3,12 @@
 #include<Point.h>
 #include<Polygon.h>
 #include<stdio.h>
+#include<Rectangle.h>
 
 Car::Car()
 {
-
-    this->topLeftPoint = Point(topLeftPointX,topLeftPointY);
-    this->topRightPoint = Point(topRightPointX,topRightPointY);
-    this->bottomLeftPoint = Point(bottomLeftPointX,bottomLeftPointY);
-    this->bottomRightPoint = Point(bottomRightPointX,bottomRightPointY);
+    this->anchor = Point(50,450);
     this->angleRotation = 30;
-
-}
-
-void Car::draw() {
-
-    Polygon body = Polygon(Color(0, 0, 0));
-
-    this->topLeftPoint.Translation(this->topLeftPoint.getX() - this->topLeftPointX, this->topLeftPoint.getY() - this->topLeftPointY);
-    this->topRightPoint.Translation(this->topRightPoint.getX() - this->topLeftPointX, this->topRightPoint.getY() - this->topRightPointY);
-    this->bottomLeftPoint.Translation(this->bottomLeftPoint.getX() - this->bottomLeftPointX, this->bottomLeftPoint.getY() - this->topLeftPointY);
-    this->bottomRightPoint.Translation(this->bottomRightPoint.getX() - this->bottomLeftPointX, this->bottomRightPoint.getY() - this->topLeftPointY);
-
-    this->topLeftPoint.Rotate(this->angleRotation);
-    this->topRightPoint.Rotate(this->angleRotation);
-    this->bottomLeftPoint.Rotate(this->angleRotation);
-    this->bottomRightPoint.Rotate(this->angleRotation);
-
-    this->topLeftPoint.Translation(this->topLeftPoint.getX() + this->topLeftPointX, this->topLeftPoint.getY() + this->topLeftPointY);
-    this->topRightPoint.Translation(this->topRightPoint.getX() + this->topRightPointX, this->topRightPoint.getY() + this->topRightPointY);
-    this->bottomLeftPoint.Translation(this->bottomLeftPoint.getX() + this->bottomLeftPointX, this->bottomLeftPoint.getY() + this->bottomLeftPointY);
-    this->bottomRightPoint.Translation(this->bottomRightPoint.getX() + this->bottomRightPointX, this->bottomRightPoint.getY() + this->bottomRightPointY);
-
-    body.points.push_back(this->topLeftPoint);
-    body.points.push_back(this->topRightPoint);
-    body.points.push_back(this->bottomRightPoint);
-    body.points.push_back(this->bottomLeftPoint);
-
-    body.draw();
-
 }
 
 Car::~Car()
@@ -48,14 +16,18 @@ Car::~Car()
     //dtor
 }
 
-void Car::updatePosition()
-{
-    this->topLeftPoint.setX((this->topLeftPoint.getX() - 2));
-    this->topLeftPoint.setY(this->topLeftPoint.getY() - 2);
-    this->topRightPoint.setX(this->topRightPoint.getX() - 2);
-    this->topRightPoint.setY(this->topRightPoint.getY() - 2);
-    this->bottomLeftPoint.setX(this->bottomLeftPoint.getX() - 2);
-    this->bottomLeftPoint.setY(this->bottomLeftPoint.getY() - 2);
-    this->bottomRightPoint.setX(this->bottomRightPoint.getX() - 2);
-    this->bottomRightPoint.setY(this->bottomRightPoint.getY() - 2);
+void Car::draw() {
+
+    Rectangle body = Rectangle(Line(Point(anchor.getX(), anchor.getY()), Point(anchor.getX() + 200, anchor.getY()), Color(0,0,0), true),
+                               Line(Point(anchor.getX(), anchor.getY() - 100), Point(anchor.getX() + 200, anchor.getY() - 100), Color(0,0,0), true),
+                               Line(Point(anchor.getX(), anchor.getY()), Point(anchor.getX(), anchor.getY() - 100), Color(0,0,0), true),
+                               Line(Point(anchor.getX() + 200, anchor.getY()), Point(anchor.getX() + 200, anchor.getY() - 100), Color(0,0,0), true));
+
+    body.rotate(this->angleRotation, this->anchor);
+
+    //inferiorLine.rotateLine(this->angleRotation, this->anchor.getX(), this->anchor.getY());
+    //line4.rotateLine(this->angleRotation, this->anchor.getX(), this->anchor.getY());
+
+    body.draw();
+
 }

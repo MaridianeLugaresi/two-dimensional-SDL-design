@@ -15,6 +15,7 @@ class Line
         virtual ~Line();
         Point start;
         Point end;
+        void rotate();
 
     protected:
 
