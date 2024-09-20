@@ -11,8 +11,6 @@ Ramp::Ramp()
     Point pointEnd = Point(639,300);
 
     this->line = Line(pointInitial, pointEnd, color);
-
-
 }
 
 void Ramp::draw() {

@@ -55,26 +55,28 @@ void Rectangle::rotate(int angleRotation, Point anchor)
                        Point(infLine.end.getX() - leftLine.end.getX(),
                              supLine.start.getY() - leftLine.end.getY()),
                        angleRotation);
-/*
-    //MOVE NOVAMNTE PARA A ORIGEM
-    this->superior.translation(Point(this->superior.start.getX() + supLine.start.getX(),
-                                     this->superior.start.getY() + supLine.start.getY()),
-                               Point(this->superior.end.getX() + supLine.end.getX(),
-                                     this->superior.end.getY() + supLine.end.getY()));
 
-    this->inferior.translation(Point(this->inferior.start.getX() + infLine.start.getX(),
-                                     this->inferior.start.getY() + infLine.start.getY()),
-                               Point(this->inferior.end.getX() + infLine.end.getX(),
-                                     this->inferior.end.getY() + infLine.end.getY()));
 
-    this->left.translation(Point(this->left.start.getX() + leftLine.start.getX(),
-                                 this->left.start.getY() + leftLine.start.getY()),
-                           Point(this->left.end.getX() + leftLine.end.getX(),
-                                 this->left.end.getY() + leftLine.end.getY()));
 
-    this->right.translation(Point(this->right.start.getX() + rightLine.start.getX(),
-                                  this->right.start.getY() + rightLine.start.getY()),
-                            Point(this->right.end.getX() + rightLine.end.getX(),
-                                  this->right.end.getY() + rightLine.end.getY()));
-*/
+    //MOVE NOVAMENTE PARA A POSICAO INICIAL
+    this->superior.translation(Point(this->superior.start.getX() + anchor.getX(),
+                                     this->superior.start.getY() + anchor.getY()),
+                               Point(this->superior.end.getX() + anchor.getX(),
+                                     this->superior.end.getY() + anchor.getY()));
+
+    this->inferior.translation(Point(this->inferior.start.getX() + anchor.getX(),
+                                     this->inferior.start.getY() + anchor.getY()),
+                               Point(this->inferior.end.getX() + anchor.getX(),
+                                     this->inferior.end.getY() + anchor.getY()));
+
+    this->left.translation(Point(this->left.start.getX() + anchor.getX(),
+                                 this->left.start.getY() + anchor.getY()),
+                           Point(this->left.end.getX() + anchor.getX(),
+                                 this->left.end.getY() + anchor.getY()));
+
+    this->right.translation(Point(this->right.start.getX() + anchor.getX(),
+                                  this->right.start.getY() + anchor.getY()),
+                            Point(this->right.end.getX() + anchor.getX(),
+                                  this->right.end.getY() + anchor.getY()));
+
 }

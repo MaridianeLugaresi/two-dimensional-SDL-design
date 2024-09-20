@@ -510,7 +510,7 @@
 1726832700 c:\projects\two-dimensional-sdl-design\include\car.h
 	<Point.h>
 
-1726846017 source:c:\projects\two-dimensional-sdl-design\src\car.cpp
+1726860289 source:c:\projects\two-dimensional-sdl-design\src\car.cpp
 	"Car.h"
 	<Line.h>
 	<Point.h>
@@ -535,12 +535,12 @@
 1726420525 source:c:\projects\two-dimensional-sdl-design\src\context.cpp
 	"Context.h"
 
-1726846288 source:c:\projects\two-dimensional-sdl-design\src\line.cpp
+1726855404 source:c:\projects\two-dimensional-sdl-design\src\line.cpp
 	"Line.h"
 	"Context.h"
 	<math.h>
 
-1726845936 source:c:\projects\two-dimensional-sdl-design\src\point.cpp
+1726857266 source:c:\projects\two-dimensional-sdl-design\src\point.cpp
 	"Point.h"
 	<Radians.h>
 	<cmath>
@@ -565,7 +565,7 @@
 	<Line.h>
 	<Color.h>
 
-1726846244 source:c:\projects\two-dimensional-sdl-design\src\rectangle.cpp
+1726860213 source:c:\projects\two-dimensional-sdl-design\src\rectangle.cpp
 	"Rectangle.h"
 	<Line.h>
 	<stdio.h>
