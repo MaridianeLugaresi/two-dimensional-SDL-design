@@ -13,6 +13,8 @@ class Ramp
 
     private:
         Line line;
+        Point anchor;
+        int angleRotation;
 };
 
 #endif // RAMP_H

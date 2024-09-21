@@ -13,13 +13,13 @@ class Point
         void Translation(int X, int Y);
         void Rotate(double degrees);
         void moveToOrigin(int x, int y);
+        void setX(int x);
+        void setY(int y);
 
     protected:
 
     private:
         int x, y;
-        void setX(int x);
-        void setY(int y);
 };
 
 #endif // POINT_H
