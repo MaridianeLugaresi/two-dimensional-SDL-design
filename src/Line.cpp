@@ -1,6 +1,7 @@
 #include "Line.h"
 #include "Context.h"
 #include <math.h>
+#include <unistd.h>
 
 Line::Line()
 {
@@ -381,6 +382,42 @@ void Line::bresenham(int x1, int y1, int x2, int y2, int r, int g, int b)
             setPixel(x,y,r,g,b);
         }
     }
+}
+
+void Line::bezierTarget(int x, int y, Uint32 color)
+{
+    setPixel(x, y,color);
+    setPixel(x-2, y, color);
+    setPixel(x-1, y, color);
+    setPixel(x+1, y, color);
+    setPixel(x+2, y, color);
+    setPixel(x, y-2, color);
+    setPixel(x, y-1, color);
+    setPixel(x, y+1, color);
+    setPixel(x, y+2, color);
+}
+
+void Line::bezierCurve(int x[] , int y[], bool points, Uint32 color)
+{
+	double xu = 0.0 , yu = 0.0 , u = 0.0 ;
+	//int i = 0 ;
+
+    if(points) {
+        bezierTarget(x[0],y[0], color);
+        bezierTarget(x[1],y[1], color);
+        bezierTarget(x[2],y[2], color);
+        bezierTarget(x[3],y[3], color);
+    }
+
+	for(u = 0.0 ; u <= 1.0 ; u += 0.0001)
+	{
+		xu = pow(1-u,3)*x[0]+3*u*pow(1-u,2)*x[1]+3*pow(u,2)*(1-u)*x[2]
+			+pow(u,3)*x[3];
+		yu = pow(1-u,3)*y[0]+3*u*pow(1-u,2)*y[1]+3*pow(u,2)*(1-u)*y[2]
+			+pow(u,3)*y[3];
+		setPixel((int)xu , (int)yu, color) ;
+		//printf("(%d,%d)\n",(int)xu , (int)yu);
+	}
 }
 
 void Line::rotate(Point newStart, Point newEnd, int angleRotation)

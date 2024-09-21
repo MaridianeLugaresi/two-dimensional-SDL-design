@@ -17,6 +17,7 @@ class Line
         Point end;
         void rotate(Point newStart, Point newEnd, int angleRotation);
         void translation(Point newStart, Point newEnd);
+        void bezierCurve(int x[] , int y[], bool points, Uint32 color);
 
     protected:
 
@@ -29,6 +30,7 @@ class Line
         Uint32 getPixel(int x, int y);
         void bresenham(int x1, int y1, int x2, int y2, int r, int g, int b);
         void drawWuLine(int x0, int y0, int x1, int y1, Color color);
+        void bezierTarget(int x, int y, Uint32 color);
 
 };
 
