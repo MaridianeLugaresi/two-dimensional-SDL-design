@@ -35,17 +35,8 @@ void Car::draw() {
     Circle circle;
     circle.drawBresenhamCircle(this->posX + 90,this->posY + 70, 25);
     circle.drawBresenhamCircle(this->posX + 200,this->posY + 10, 25);
+    circle.drawdetailsWheel(this->posX, this->posY);
 
-    /*
-    EXAMPLE OF BEZIER CURVER
-    int xs[] = {170,150,589,170};
-    int ys[] = {70,289,150,70};
-
-    Line line = Line();
-
-    Color color = Color();
-    line.bezierCurve(xs,ys,true,color.RGB(255,0,0));
-    */
 }
 
 void Car::updatePosition()

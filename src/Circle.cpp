@@ -53,3 +53,54 @@ void Circle::drawBresenhamCircle(int xc, int yc, int radius)
         displayBresenhamCircle(xc, yc, x, y);
     }
 }
+
+void Circle::drawdetailsWheel(int posX, int posY) {
+    Line line;
+    Color color;
+
+    int xs[4];
+    int ys[4];
+
+    //The first wheel
+    xs[0] = posX + 90; xs[1] = posX + 70; xs[2] = posX + 110; xs[3] = posX + 90;
+    ys[0] = posY + 70; ys[1] = posY + 90; ys[2] = posY + 90; ys[3] = posY + 70;
+    line.bezierCurve(xs, ys, false, color.RGB(0, 0, 0));
+
+    xs[0] = posX + 90; xs[1] = posX + 115; xs[2] = posX + 110; xs[3] = posX + 90;
+    ys[0] = posY + 70; ys[1] = posY + 55; ys[2] = posY + 90; ys[3] = posY + 70;
+    line.bezierCurve(xs, ys, false, color.RGB(0, 0, 0));
+
+    xs[0] = posX + 90; xs[1] = posX + 80; xs[2] = posX + 115; xs[3] = posX + 90;
+    ys[0] = posY + 70; ys[1] = posY + 40; ys[2] = posY + 60; ys[3] = posY + 70;
+    line.bezierCurve(xs, ys, false, color.RGB(0, 0, 0));
+
+    xs[0] = posX + 90; xs[1] = posX + 60; xs[2] = posX + 90; xs[3] = posX + 90;
+    ys[0] = posY + 70; ys[1] = posY + 70; ys[2] = posY + 40; ys[3] = posY + 70;
+    line.bezierCurve(xs, ys, false, color.RGB(0, 0, 0));
+
+    xs[0] = posX + 90; xs[1] = posX + 60; xs[2] = posX + 80; xs[3] = posX + 90;
+    ys[0] = posY + 70; ys[1] = posY + 60; ys[2] = posY + 90; ys[3] = posY + 70;
+    line.bezierCurve(xs, ys, false, color.RGB(0, 0, 0));
+
+
+    //The second wheel
+    xs[0] = posX + 200; xs[1] = posX + 180; xs[2] = posX + 220; xs[3] = posX + 200;
+    ys[0] = posY + 10; ys[1] = posY + 30; ys[2] = posY + 30; ys[3] = posY + 10;
+    line.bezierCurve(xs, ys, false, color.RGB(0, 0, 0));
+
+    xs[0] = posX + 200; xs[1] = posX + 225; xs[2] = posX + 220; xs[3] = posX + 200;
+    ys[0] = posY + 10; ys[1] = posY - 5; ys[2] = posY + 30; ys[3] = posY + 10;
+    line.bezierCurve(xs, ys, false, color.RGB(0, 0, 0));
+
+    xs[0] = posX + 200; xs[1] = posX + 190; xs[2] = posX + 225; xs[3] = posX + 200;
+    ys[0] = posY + 10; ys[1] = posY - 20; ys[2] = posY + 0; ys[3] = posY + 10;
+    line.bezierCurve(xs, ys, false, color.RGB(0, 0, 0));
+
+    xs[0] = posX + 200; xs[1] = posX + 170; xs[2] = posX + 200; xs[3] = posX + 200;
+    ys[0] = posY + 10; ys[1] = posY + 10; ys[2] = posY - 20; ys[3] = posY + 10;
+    line.bezierCurve(xs, ys, false, color.RGB(0, 0, 0));
+
+    xs[0] = posX + 200; xs[1] = posX + 170; xs[2] = posX + 190; xs[3] = posX + 200;
+    ys[0] = posY + 10; ys[1] = posY + 0; ys[2] = posY + 30; ys[3] = posY + 10;
+    line.bezierCurve(xs, ys, false, color.RGB(0, 0, 0));
+}

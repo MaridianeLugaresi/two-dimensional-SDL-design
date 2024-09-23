@@ -25,10 +25,7 @@ void Ramp::draw() {
     pointEnd.Rotate(this->angleRotation);
 
     pointInitial.Translation(pointInitial.getX() + this->anchor.getX(), pointInitial.getY() + this->anchor.getY());
-    pointEnd.Translation(pointEnd.getX() + pointInitial.getX(), this->anchor.getY() - pointEnd.getY());
-
-    printf("Inicial %d    %d \n", pointInitial.getX(), pointInitial.getY());
-    printf("Final   %d    %d \n", pointEnd.getX(), pointEnd.getY());
+    pointEnd.Translation(639, this->anchor.getY() - pointEnd.getY());
 
     this->line = Line(pointInitial, pointEnd, color);
     this->line.draw();

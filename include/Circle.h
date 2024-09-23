@@ -8,6 +8,7 @@ class Circle
         Circle();
         virtual ~Circle();
         void drawBresenhamCircle(int xc, int yc, int radius);
+        void drawdetailsWheel(int posX, int posY);
 
     protected:
 
