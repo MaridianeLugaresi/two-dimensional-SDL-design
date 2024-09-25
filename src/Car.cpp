@@ -23,10 +23,10 @@ Car::~Car()
 
 void Car::draw() {
 
-    Rectangle body = Rectangle(Line(Point(this->posX, this->posY), Point(this->posX + 200, this->posY), Color(65,105,225), true),
-                               Line(Point(this->posX, this->posY - 100), Point(this->posX + 200, this->posY - 100), Color(50,205,50), true),
-                               Line(Point(this->posX, this->posY), Point(this->posX, this->posY - 100), Color(244,164,96), true),
-                               Line(Point(this->posX + 200, this->posY), Point(this->posX + 200, this->posY - 100), Color(255,0,255), true));
+    Rectangle body = Rectangle(Line(Point(this->posX, this->posY), Point(this->posX + 200, this->posY), Color(0,0,0), true),
+                               Line(Point(this->posX, this->posY - 100), Point(this->posX + 200, this->posY - 100), Color(0,0,0), true),
+                               Line(Point(this->posX, this->posY), Point(this->posX, this->posY - 100), Color(0,0,0), true),
+                               Line(Point(this->posX + 200, this->posY), Point(this->posX + 200, this->posY - 100), Color(0,0,0), true));
 
     body.rotate(this->angleRotation, Point(this->posX, this->posY));
 
