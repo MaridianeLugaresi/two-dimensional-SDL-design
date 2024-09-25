@@ -3,7 +3,14 @@
 
 Circle::Circle()
 {
-    //ctor
+
+}
+
+Circle::Circle(int x, int y, int radius)
+{
+    this->posX = x;
+    this->posY = y;
+    this->radius = radius;
 }
 
 Circle::~Circle()
@@ -11,9 +18,9 @@ Circle::~Circle()
     //dtor
 }
 
-void Circle::displayBresenhamCircle(int xc, int yc, int x, int y)
+void Circle::displayBresenhamCircle(int x, int y)
 {
-    Line line1 = Line();
+    Line line1;
     Line line2;
     Line line3;
     Line line4;
@@ -22,21 +29,21 @@ void Circle::displayBresenhamCircle(int xc, int yc, int x, int y)
     Line line7;
     Line line8;
 
-    line1.setPixel(xc+x, yc+y, 0, 0, 0);
-    line2.setPixel(xc-x, yc+y, 0, 0, 0);
-    line3.setPixel(xc+x, yc-y, 0, 0, 0);
-    line4.setPixel(xc-x, yc-y, 0, 0, 0);
-    line5.setPixel(xc+y, yc+x, 0, 0, 0);
-    line6.setPixel(xc-y, yc+x, 0, 0, 0);
-    line7.setPixel(xc+y, yc-x, 0, 0, 0);
-    line8.setPixel(xc-y, yc-x, 0, 0, 0);
+    line1.setPixel(this->posX+x, this->posY+y, 0, 0, 0);
+    line2.setPixel(this->posX-x, this->posY+y, 0, 0, 0);
+    line3.setPixel(this->posX+x, this->posY-y, 0, 0, 0);
+    line4.setPixel(this->posX-x, this->posY-y, 0, 0, 0);
+    line5.setPixel(this->posX+y, this->posY+x, 0, 0, 0);
+    line6.setPixel(this->posX-y, this->posY+x, 0, 0, 0);
+    line7.setPixel(this->posX+y, this->posY-x, 0, 0, 0);
+    line8.setPixel(this->posX-y, this->posY-x, 0, 0, 0);
 }
 
-void Circle::drawBresenhamCircle(int xc, int yc, int radius)
+void Circle::drawBresenhamCircle()
 {
-    int x = 0, y = radius;
-    int decesionParameter = 3 - 2 * radius;
-    displayBresenhamCircle(xc, yc, x, y);
+    int x = 0, y = this->radius;
+    int decesionParameter = 3 - 2 * this->radius;
+    displayBresenhamCircle(x, y);
 
     while(y >= x)
     {
@@ -50,57 +57,6 @@ void Circle::drawBresenhamCircle(int xc, int yc, int radius)
         {
             decesionParameter = decesionParameter + 4 * x + 6;
         }
-        displayBresenhamCircle(xc, yc, x, y);
+        displayBresenhamCircle(x, y);
     }
-}
-
-void Circle::drawdetailsWheel(int posX, int posY) {
-    Line line;
-    Color color;
-
-    int xs[4];
-    int ys[4];
-
-    //The first wheel
-    xs[0] = posX + 90; xs[1] = posX + 70; xs[2] = posX + 110; xs[3] = posX + 90;
-    ys[0] = posY + 70; ys[1] = posY + 90; ys[2] = posY + 90; ys[3] = posY + 70;
-    line.bezierCurve(xs, ys, false, color.RGB(0, 0, 0));
-
-    xs[0] = posX + 90; xs[1] = posX + 115; xs[2] = posX + 110; xs[3] = posX + 90;
-    ys[0] = posY + 70; ys[1] = posY + 55; ys[2] = posY + 90; ys[3] = posY + 70;
-    line.bezierCurve(xs, ys, false, color.RGB(0, 0, 0));
-
-    xs[0] = posX + 90; xs[1] = posX + 80; xs[2] = posX + 115; xs[3] = posX + 90;
-    ys[0] = posY + 70; ys[1] = posY + 40; ys[2] = posY + 60; ys[3] = posY + 70;
-    line.bezierCurve(xs, ys, false, color.RGB(0, 0, 0));
-
-    xs[0] = posX + 90; xs[1] = posX + 60; xs[2] = posX + 90; xs[3] = posX + 90;
-    ys[0] = posY + 70; ys[1] = posY + 70; ys[2] = posY + 40; ys[3] = posY + 70;
-    line.bezierCurve(xs, ys, false, color.RGB(0, 0, 0));
-
-    xs[0] = posX + 90; xs[1] = posX + 60; xs[2] = posX + 80; xs[3] = posX + 90;
-    ys[0] = posY + 70; ys[1] = posY + 60; ys[2] = posY + 90; ys[3] = posY + 70;
-    line.bezierCurve(xs, ys, false, color.RGB(0, 0, 0));
-
-
-    //The second wheel
-    xs[0] = posX + 200; xs[1] = posX + 180; xs[2] = posX + 220; xs[3] = posX + 200;
-    ys[0] = posY + 10; ys[1] = posY + 30; ys[2] = posY + 30; ys[3] = posY + 10;
-    line.bezierCurve(xs, ys, false, color.RGB(0, 0, 0));
-
-    xs[0] = posX + 200; xs[1] = posX + 225; xs[2] = posX + 220; xs[3] = posX + 200;
-    ys[0] = posY + 10; ys[1] = posY - 5; ys[2] = posY + 30; ys[3] = posY + 10;
-    line.bezierCurve(xs, ys, false, color.RGB(0, 0, 0));
-
-    xs[0] = posX + 200; xs[1] = posX + 190; xs[2] = posX + 225; xs[3] = posX + 200;
-    ys[0] = posY + 10; ys[1] = posY - 20; ys[2] = posY + 0; ys[3] = posY + 10;
-    line.bezierCurve(xs, ys, false, color.RGB(0, 0, 0));
-
-    xs[0] = posX + 200; xs[1] = posX + 170; xs[2] = posX + 200; xs[3] = posX + 200;
-    ys[0] = posY + 10; ys[1] = posY + 10; ys[2] = posY - 20; ys[3] = posY + 10;
-    line.bezierCurve(xs, ys, false, color.RGB(0, 0, 0));
-
-    xs[0] = posX + 200; xs[1] = posX + 170; xs[2] = posX + 190; xs[3] = posX + 200;
-    ys[0] = posY + 10; ys[1] = posY + 0; ys[2] = posY + 30; ys[3] = posY + 10;
-    line.bezierCurve(xs, ys, false, color.RGB(0, 0, 0));
 }

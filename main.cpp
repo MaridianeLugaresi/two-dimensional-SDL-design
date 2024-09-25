@@ -20,8 +20,6 @@ SDL_Window* pWindow = nullptr;
 SDL_Renderer* pRenderer = nullptr;
 SDL_Surface * window_surface = nullptr;
 
-int offset = 10;
-
 void display(Car &car)
 {
 

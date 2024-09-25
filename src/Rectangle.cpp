@@ -58,7 +58,6 @@ void Rectangle::rotate(int angleRotation, Point anchor)
                        angleRotation);
 
 
-
     //MOVE NOVAMENTE PARA A POSICAO INICIAL
     this->superior.translation(Point(this->superior.start.getX() + anchor.getX(),
                                      this->superior.start.getY() + anchor.getY()),

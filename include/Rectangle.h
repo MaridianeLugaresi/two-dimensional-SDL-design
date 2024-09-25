@@ -9,10 +9,6 @@ class Rectangle
         virtual ~Rectangle();
         void draw();
         void rotate(int angleRotation, Point anchor);
-
-    protected:
-
-    private:
         Line superior;
         Line inferior;
         Line left;

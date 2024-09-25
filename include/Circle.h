@@ -6,14 +6,18 @@ class Circle
 {
     public:
         Circle();
+        Circle(int x, int y, int radius);
         virtual ~Circle();
-        void drawBresenhamCircle(int xc, int yc, int radius);
-        void drawdetailsWheel(int posX, int posY);
+        void drawBresenhamCircle();
+        void updatePosition(int x, int y);
 
     protected:
 
     private:
-        void displayBresenhamCircle(int xc, int yc, int x, int y);
+        int posX;
+        int posY;
+        int radius;
+        void displayBresenhamCircle(int x, int y);
 };
 
 #endif // CIRCLE_H

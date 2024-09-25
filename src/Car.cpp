@@ -7,6 +7,7 @@
 #include<Circle.h>
 #include <Color.h>
 #include <unistd.h>
+#include <Wheel.h>
 
 Car::Car()
 {
@@ -23,19 +24,27 @@ Car::~Car()
 
 void Car::draw() {
 
-    Rectangle body = Rectangle(Line(Point(this->posX, this->posY), Point(this->posX + 200, this->posY), Color(0,0,0), true),
-                               Line(Point(this->posX, this->posY - 100), Point(this->posX + 200, this->posY - 100), Color(0,0,0), true),
-                               Line(Point(this->posX, this->posY), Point(this->posX, this->posY - 100), Color(0,0,0), true),
-                               Line(Point(this->posX + 200, this->posY), Point(this->posX + 200, this->posY - 100), Color(0,0,0), true));
+    Rectangle backBody = Rectangle(Line(Point(this->posX, this->posY), Point(this->posX + 150, this->posY), Color(0,0,0), true),
+                                   Line(Point(this->posX, this->posY - 80), Point(this->posX + 150, this->posY - 80), Color(0,0,0), true),
+                                   Line(Point(this->posX, this->posY), Point(this->posX, this->posY - 80), Color(0,0,0), true),
+                                   Line(Point(this->posX + 150, this->posY), Point(this->posX + 150, this->posY - 80), Color(0,0,0), true));
 
-    body.rotate(this->angleRotation, Point(this->posX, this->posY));
+    Rectangle frontBody = Rectangle(Line(Point(backBody.inferior.end.getX(), backBody.inferior.end.getY() + 20), Point(backBody.inferior.end.getX() + 125, backBody.inferior.end.getY() + 20), Color(0,0,0), true),
+                                    Line(Point(backBody.superior.end.getX(), backBody.superior.end.getY()), Point(backBody.superior.end.getX() + 125, backBody.superior.end.getY()), Color(0,0,0), true),
+                                    Line(Point(backBody.superior.end.getX(), backBody.superior.end.getY()), Point(backBody.inferior.end.getX(), backBody.inferior.end.getY() + 20), Color(0,0,0), true),
+                                    Line(Point(backBody.inferior.end.getX() + 125, backBody.superior.end.getY()), Point(backBody.inferior.end.getX() + 125, backBody.inferior.end.getY() + 20), Color(0,0,0), true));
 
-    body.draw();
+    backBody.rotate(this->angleRotation, Point(this->posX, this->posY));
+    //frontBody.rotate(this->angleRotation, Point(this->posX, this->posY));
 
-    Circle circle;
-    circle.drawBresenhamCircle(this->posX + 90,this->posY + 70, 25);
-    circle.drawBresenhamCircle(this->posX + 200,this->posY + 10, 25);
-    circle.drawdetailsWheel(this->posX, this->posY);
+    Wheel firstWheel = Wheel(Point(this->posX + 80, this->posY + 60), 30);
+    Wheel secondWheel = Wheel(Point(this->posX + 180, this->posY + 10), 30);
+
+    backBody.draw();
+    //frontBody.draw();
+
+    firstWheel.draw();
+    secondWheel.draw();
 
 }
 
