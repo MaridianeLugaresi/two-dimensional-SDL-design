@@ -10,6 +10,7 @@ class Wheel
         Wheel(Point anchor, int radius, int offset);
         virtual ~Wheel();
         void draw();
+        void rotate();
 
     protected:
 
@@ -21,7 +22,6 @@ class Wheel
         Line firstRadius;
         Line secondRadius;
         int offset;
-        void rotate();
 
 };
 
