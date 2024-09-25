@@ -1,48 +1,35 @@
 #include "Polygon.h"
+#include<Point.h>
 #include<list>
 #include<Line.h>
-#include<Color.h>
-#include<Point.h>
-#include<stdio.h>
 
-Polygon::Polygon(Color color)
+Polygon::Polygon(list<Point> points)
 {
-    this->color = color;
-}
-
-void Polygon::draw() {
-
-    Point primeiro = this->points.front();
-    Point anterior = this->points.front();
-    Point atual;
-
-    Line line = Line(anterior, atual, this->color, 1);
-
-    int i = 0;
-
-    for(Point p : this->points) {
-        if(i>0) {
-            atual = p;
-            line.start.setX(anterior.getX());
-            line.start.setY(anterior.getY());
-            line.end.setX(atual.getX());
-            line.end.setY(atual.getY());
-
-            line.draw();
-            anterior = atual;
-        }
-        i++;
-    }
-
-    line.start.setX(atual.getX());
-    line.start.setY(atual.getY());
-    line.end.setX(primeiro.getX());
-    line.end.setY(primeiro.getY());
-    line.draw();
-
+    this->points = points;
 }
 
 Polygon::~Polygon()
 {
     //dtor
+}
+
+void Polygon::draw()
+{
+    Point primeiro = this->points.front();
+    Point anterior = this->points.front();
+    Point atual;
+    Line line;
+
+    int i = 0;
+    for(Point p : this->points)
+    {
+        if(i>0)
+        {
+            atual = p;
+            line.drawWuLine(anterior.getX(), anterior.getY(), atual.getX(), atual.getY(), Color(0,0,0));
+            anterior = atual;
+        }
+        i++;
+    }
+    line.drawWuLine(atual.getX(), atual.getY(), primeiro.getX(), primeiro.getY(), Color(0,0,0));
 }

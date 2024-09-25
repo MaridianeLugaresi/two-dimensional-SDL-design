@@ -1,22 +1,21 @@
 #ifndef POLYGON_H
 #define POLYGON_H
 #include<Point.h>
-#include<Color.h>
-#include<list>
+#include <list>
+
+using namespace std;
 
 class Polygon
 {
     public:
-        Polygon(Color color);
+        Polygon(list<Point> points);
         virtual ~Polygon();
-        std::list<Point> points;
         void draw();
-        Color color;
 
     protected:
 
     private:
-
+        list<Point> points;
 };
 
 #endif // POLYGON_H

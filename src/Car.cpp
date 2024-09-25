@@ -44,8 +44,8 @@ void Car::draw() {
     backBody.draw();
     //frontBody.draw();
 
-    frontWheel.rotate();
-    backWheel.rotate();
+    //frontWheel.rotate();
+    //backWheel.rotate();
 
     frontWheel.draw();
     backWheel.draw();
