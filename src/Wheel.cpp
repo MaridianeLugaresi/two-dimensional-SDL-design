@@ -2,11 +2,12 @@
 #include<Circle.h>
 #include<Point.h>
 #include<Line.h>
+#include <stdio.h>
 
-Wheel::Wheel(Point anchor, int radius)
+Wheel::Wheel(Point anchor, int radius, int offset)
 {
     this->anchor = anchor;
-    this->offset = 10;
+    this->offset = offset;
     this->posX = anchor.getX();
     this->posY = anchor.getY();
     this->circle = Circle(anchor.getX(), anchor.getY(), radius);
@@ -21,6 +22,7 @@ Wheel::~Wheel()
 
 void Wheel::draw()
 {
+    rotate();
     this->firstRadius.draw();
     this->secondRadius.draw();
     this->circle.drawBresenhamCircle();
@@ -28,5 +30,6 @@ void Wheel::draw()
 
 void Wheel::rotate()
 {
-
+    this->firstRadius.rotate(this->firstRadius.start, this->firstRadius.end, -30);
+    this->secondRadius.rotate(this->secondRadius.start, this->secondRadius.end, -30);
 }

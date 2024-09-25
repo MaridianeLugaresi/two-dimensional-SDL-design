@@ -57,7 +57,6 @@ void Rectangle::rotate(int angleRotation, Point anchor)
                              supLine.start.getY() - leftLine.end.getY()),
                        angleRotation);
 
-
     //MOVE NOVAMENTE PARA A POSICAO INICIAL
     this->superior.translation(Point(this->superior.start.getX() + anchor.getX(),
                                      this->superior.start.getY() + anchor.getY()),
@@ -78,5 +77,4 @@ void Rectangle::rotate(int angleRotation, Point anchor)
                                   this->right.start.getY() + anchor.getY()),
                             Point(this->right.end.getX() + anchor.getX(),
                                   this->right.end.getY() + anchor.getY()));
-
 }

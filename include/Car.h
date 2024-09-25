@@ -1,6 +1,7 @@
 #ifndef CAR_H
 #define CAR_H
 #include<Point.h>
+#include<Wheel.h>
 
 class Car
 {
@@ -15,6 +16,7 @@ class Car
         int angleRotation;
         int posX;
         int posY;
+        int offsetWheel;
 
 };
 

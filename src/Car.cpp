@@ -15,6 +15,7 @@ Car::Car()
     this->posY = 350;
     this->anchor = Point(this->posX,this->posY);
     this->angleRotation = -30;
+    this->offsetWheel = 10;
 }
 
 Car::~Car()
@@ -37,14 +38,14 @@ void Car::draw() {
     backBody.rotate(this->angleRotation, Point(this->posX, this->posY));
     //frontBody.rotate(this->angleRotation, Point(this->posX, this->posY));
 
-    Wheel firstWheel = Wheel(Point(this->posX + 80, this->posY + 60), 30);
-    Wheel secondWheel = Wheel(Point(this->posX + 180, this->posY + 10), 30);
+    Wheel backWheel = Wheel(Point(this->posX + 80, this->posY + 60), 30, this->offsetWheel);
+    Wheel frontWheel = Wheel(Point(this->posX + 160, this->posY + 20), 30, this->offsetWheel);
 
     backBody.draw();
     //frontBody.draw();
 
-    firstWheel.draw();
-    secondWheel.draw();
+    backWheel.draw();
+    frontWheel.draw();
 
 }
 
@@ -52,7 +53,9 @@ void Car::updatePosition()
 {
     int x = this->posX;
     int y = this->posY;
+    int offsetWheel = this->offsetWheel;
 
     this->posX = x +2;
     this->posY = y -1;
+    this->offsetWheel = offsetWheel + 2;
 }
