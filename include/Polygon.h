@@ -8,14 +8,17 @@ using namespace std;
 class Polygon
 {
     public:
-        Polygon(list<Point> points);
+        Polygon(list<Point> points, int degrees);
         virtual ~Polygon();
         void draw();
+        void rotate();
 
     protected:
 
     private:
         list<Point> points;
+        int degrees;
+        void setPoints(list<Point> points);
 };
 
 #endif // POLYGON_H

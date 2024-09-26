@@ -21,8 +21,8 @@ void Ramp::draw() {
     pointEnd.moveToOrigin(pointEnd.getX() - pointInitial.getX(), pointEnd.getY() - pointEnd.getY());
     pointInitial.moveToOrigin(pointInitial.getX() - pointInitial.getX(), pointInitial.getY() - pointInitial.getY());
 
-    pointInitial.Rotate(this->angleRotation);
-    pointEnd.Rotate(this->angleRotation);
+    pointInitial.rotate(this->angleRotation);
+    pointEnd.rotate(this->angleRotation);
 
     pointInitial.Translation(pointInitial.getX() + this->anchor.getX(), pointInitial.getY() + this->anchor.getY());
     pointEnd.Translation(639, this->anchor.getY() - pointEnd.getY());

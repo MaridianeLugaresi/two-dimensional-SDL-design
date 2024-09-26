@@ -11,7 +11,7 @@ class Point
         int getY();
         virtual ~Point();
         void Translation(int X, int Y);
-        void Rotate(double degrees);
+        void rotate(double degrees);
         void moveToOrigin(int x, int y);
         void setX(int x);
         void setY(int y);
@@ -20,6 +20,7 @@ class Point
 
     private:
         int x, y;
+        int degrees;
 };
 
 #endif // POINT_H

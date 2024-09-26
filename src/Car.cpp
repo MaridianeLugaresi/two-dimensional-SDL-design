@@ -8,6 +8,7 @@
 #include <Color.h>
 #include <unistd.h>
 #include <Wheel.h>
+#include<Polygon.h>
 
 Car::Car()
 {
@@ -25,6 +26,22 @@ Car::~Car()
 
 void Car::draw() {
 
+    list<Point> points;
+
+    //SUPERIOR
+    points.push_back(Point(this->posX,this->posY - 50));
+    points.push_back(Point(this->posX + 50,this->posY - 50));
+
+    //INFERIOR
+    points.push_back(Point(this->posX + 50,this->posY));
+    points.push_back(Point(this->posX,this->posY));
+
+    Polygon polygon = Polygon(points, 330);
+
+    polygon.rotate();
+
+    polygon.draw();
+/*
     Rectangle backBody = Rectangle(Line(Point(this->posX, this->posY), Point(this->posX + 150, this->posY), Color(0,0,0), true),
                                    Line(Point(this->posX, this->posY - 80), Point(this->posX + 150, this->posY - 80), Color(0,0,0), true),
                                    Line(Point(this->posX, this->posY), Point(this->posX, this->posY - 80), Color(0,0,0), true),
@@ -49,11 +66,12 @@ void Car::draw() {
 
     frontWheel.draw();
     backWheel.draw();
-
+*/
 }
 
 void Car::updatePosition()
 {
+    /*
     int x = this->posX;
     int y = this->posY;
     int offsetWheel = this->offsetWheel;
@@ -61,4 +79,5 @@ void Car::updatePosition()
     this->posX = x +2;
     this->posY = y -1;
     this->offsetWheel = offsetWheel + 2;
+*/
 }

@@ -508,7 +508,7 @@
 1726103701 c:\projects\two-dimensional-sdl-design\include\color.h
 	<SDL2/SDL.h>
 
-1727302947 c:\projects\two-dimensional-sdl-design\include\point.h
+1727309957 c:\projects\two-dimensional-sdl-design\include\point.h
 
 1727306658 c:\projects\two-dimensional-sdl-design\include\line.h
 	<Point.h>
@@ -522,7 +522,7 @@
 	<Point.h>
 	<Wheel.h>
 
-1727304859 source:c:\projects\two-dimensional-sdl-design\src\car.cpp
+1727313092 source:c:\projects\two-dimensional-sdl-design\src\car.cpp
 	"Car.h"
 	<Line.h>
 	<Point.h>
@@ -533,8 +533,9 @@
 	<Color.h>
 	<unistd.h>
 	<Wheel.h>
+	<Polygon.h>
 
-1727306202 c:\projects\two-dimensional-sdl-design\include\polygon.h
+1727311126 c:\projects\two-dimensional-sdl-design\include\polygon.h
 	<Point.h>
 	<list>
 
@@ -551,13 +552,13 @@
 1726103701 source:c:\projects\two-dimensional-sdl-design\src\context.cpp
 	"Context.h"
 
-1727302947 source:c:\projects\two-dimensional-sdl-design\src\line.cpp
+1727309707 source:c:\projects\two-dimensional-sdl-design\src\line.cpp
 	"Line.h"
 	"Context.h"
 	<math.h>
 	<unistd.h>
 
-1727302947 source:c:\projects\two-dimensional-sdl-design\src\point.cpp
+1727309694 source:c:\projects\two-dimensional-sdl-design\src\point.cpp
 	"Point.h"
 	<Radians.h>
 	<cmath>
@@ -565,16 +566,17 @@
 
 1726698413 c:\projects\two-dimensional-sdl-design\include\radians.h
 
-1727306592 source:c:\projects\two-dimensional-sdl-design\src\polygon.cpp
+1727313090 source:c:\projects\two-dimensional-sdl-design\src\polygon.cpp
 	"Polygon.h"
 	<Point.h>
 	<list>
 	<Line.h>
+	<stdio.h>
 
 1726698413 source:c:\projects\two-dimensional-sdl-design\src\radians.cpp
 	"Radians.h"
 
-1727302947 source:c:\projects\two-dimensional-sdl-design\src\ramp.cpp
+1727309717 source:c:\projects\two-dimensional-sdl-design\src\ramp.cpp
 	"Ramp.h"
 	<Point.h>
 	<Line.h>
