@@ -2,6 +2,7 @@
 #define CAR_H
 #include<Point.h>
 #include<Wheel.h>
+#include<list>
 
 class Car
 {
@@ -9,7 +10,6 @@ class Car
         Car();
         virtual ~Car();
         void draw();
-        void updatePosition();
 
     private:
         Point anchor;
@@ -17,6 +17,11 @@ class Car
         int posX;
         int posY;
         int offsetWheel;
+
+        void updatePosition();
+
+        void drawBodyCar();
+        void drawWheelsCar();
 
 };
 

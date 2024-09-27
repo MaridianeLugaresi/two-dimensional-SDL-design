@@ -25,7 +25,13 @@ Car::~Car()
 }
 
 void Car::draw() {
+    drawBodyCar();
+    drawWheelsCar();
+    updatePosition();
+}
 
+void Car::drawBodyCar()
+{
     list<Point> points;
 
     //SUPERIOR
@@ -37,47 +43,20 @@ void Car::draw() {
     points.push_back(Point(this->posX,this->posY));
 
     Polygon polygon = Polygon(points, 330);
-
     polygon.rotate();
-
     polygon.draw();
-/*
-    Rectangle backBody = Rectangle(Line(Point(this->posX, this->posY), Point(this->posX + 150, this->posY), Color(0,0,0), true),
-                                   Line(Point(this->posX, this->posY - 80), Point(this->posX + 150, this->posY - 80), Color(0,0,0), true),
-                                   Line(Point(this->posX, this->posY), Point(this->posX, this->posY - 80), Color(0,0,0), true),
-                                   Line(Point(this->posX + 150, this->posY), Point(this->posX + 150, this->posY - 80), Color(0,0,0), true));
+}
 
-    Rectangle frontBody = Rectangle(Line(Point(backBody.inferior.end.getX(), backBody.inferior.end.getY() + 20), Point(backBody.inferior.end.getX() + 125, backBody.inferior.end.getY() + 20), Color(0,0,0), true),
-                                    Line(Point(backBody.superior.end.getX(), backBody.superior.end.getY()), Point(backBody.superior.end.getX() + 125, backBody.superior.end.getY()), Color(0,0,0), true),
-                                    Line(Point(backBody.superior.end.getX(), backBody.superior.end.getY()), Point(backBody.inferior.end.getX(), backBody.inferior.end.getY() + 20), Color(0,0,0), true),
-                                    Line(Point(backBody.inferior.end.getX() + 125, backBody.superior.end.getY()), Point(backBody.inferior.end.getX() + 125, backBody.inferior.end.getY() + 20), Color(0,0,0), true));
+void Car::drawWheelsCar()
+{
 
-    backBody.rotate(this->angleRotation, Point(this->posX, this->posY));
-    //frontBody.rotate(this->angleRotation, Point(this->posX, this->posY));
-
-    Wheel backWheel = Wheel(Point(this->posX + 80, this->posY + 60), 30, this->offsetWheel);
-    Wheel frontWheel = Wheel(Point(this->posX + 160, this->posY + 20), 30, this->offsetWheel);
-
-    backBody.draw();
-    //frontBody.draw();
-
-    //frontWheel.rotate();
-    //backWheel.rotate();
-
-    frontWheel.draw();
-    backWheel.draw();
-*/
 }
 
 void Car::updatePosition()
 {
-    /*
     int x = this->posX;
     int y = this->posY;
-    int offsetWheel = this->offsetWheel;
 
     this->posX = x +2;
     this->posY = y -1;
-    this->offsetWheel = offsetWheel + 2;
-*/
 }
