@@ -63,12 +63,12 @@ void Polygon::draw()
         if(i>0)
         {
             atual = p;
-            line.drawWuLine(anterior.getX(), anterior.getY(), atual.getX(), atual.getY(), Color(0,0,0));
+            line.drawWuLine(anterior.getX(), anterior.getY(), atual.getX(), atual.getY(), this->color);
             anterior = atual;
         }
         i++;
     }
-    line.drawWuLine(atual.getX(), atual.getY(), primeiro.getX(), primeiro.getY(), Color(0,0,0));
+    line.drawWuLine(atual.getX(), atual.getY(), primeiro.getX(), primeiro.getY(), this->color);
     scanFill();
 }
 

@@ -38,11 +38,11 @@ void Car::drawBodyCar()
     points.push_back(Point(53 + this->anchor.getX(), 468 + this->anchor.getY()));
     points.push_back(Point(53 + this->anchor.getX(), 448 + this->anchor.getY()));
     points.push_back(Point(62 + this->anchor.getX(), 427 + this->anchor.getY()));
-    points.push_back(Point(91 + this->anchor.getX(), 425 + this->anchor.getY()));
+    points.push_back(Point(90 + this->anchor.getX(), 425 + this->anchor.getY()));
     points.push_back(Point(105 + this->anchor.getX(), 425 + this->anchor.getY()));
     points.push_back(Point(115 + this->anchor.getX(), 440 + this->anchor.getY()));
-    points.push_back(Point(115 + this->anchor.getX(), 471 + this->anchor.getY()));
-    points.push_back(Point(161 + this->anchor.getX(), 471 + this->anchor.getY()));
+    points.push_back(Point(116 + this->anchor.getX(), 471 + this->anchor.getY()));
+    points.push_back(Point(161 + this->anchor.getX(), 472 + this->anchor.getY()));
     points.push_back(Point(236 + this->anchor.getX(), 475 + this->anchor.getY()));
     points.push_back(Point(237 + this->anchor.getX(), 461 + this->anchor.getY()));
     points.push_back(Point(240 + this->anchor.getX(), 448 + this->anchor.getY()));
@@ -69,7 +69,7 @@ void Car::drawBodyCar()
     points.push_back(Point(39 + this->anchor.getX(), 369 + this->anchor.getY()));
     points.push_back(Point(32 + this->anchor.getX(), 397 + this->anchor.getY()));
 
-    Polygon polygon = Polygon(points, this->angleRotation, Color(218,218,218));
+    Polygon polygon = Polygon(points, this->angleRotation, Color(140,140,140));
     polygon.rotate();
     polygon.draw();
 }
