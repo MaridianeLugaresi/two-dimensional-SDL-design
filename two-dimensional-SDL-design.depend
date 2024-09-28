@@ -518,18 +518,17 @@
 1726923982 c:\projects\two-dimensional-sdl-design\include\ramp.h
 	<Line.h>
 
-1727481002 c:\projects\two-dimensional-sdl-design\include\car.h
+1727490431 c:\projects\two-dimensional-sdl-design\include\car.h
 	<Point.h>
 	<Wheel.h>
 	<list>
 
-1727481051 source:c:\projects\two-dimensional-sdl-design\src\car.cpp
+1727490673 source:c:\projects\two-dimensional-sdl-design\src\car.cpp
 	"Car.h"
 	<Line.h>
 	<Point.h>
 	<Polygon.h>
 	<stdio.h>
-	<Rectangle.h>
 	<Circle.h>
 	<Color.h>
 	<unistd.h>

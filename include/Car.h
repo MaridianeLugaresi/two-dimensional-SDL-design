@@ -14,8 +14,6 @@ class Car
     private:
         Point anchor;
         int angleRotation;
-        int posX;
-        int posY;
         int offsetWheel;
 
         void updatePosition();
