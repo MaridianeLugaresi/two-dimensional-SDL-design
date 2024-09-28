@@ -69,7 +69,7 @@ void Car::drawBodyCar()
     points.push_back(Point(39 + this->anchor.getX(), 369 + this->anchor.getY()));
     points.push_back(Point(32 + this->anchor.getX(), 397 + this->anchor.getY()));
 
-    Polygon polygon = Polygon(points, this->angleRotation);
+    Polygon polygon = Polygon(points, this->angleRotation, Color(218,218,218));
     polygon.rotate();
     polygon.draw();
 }
@@ -89,8 +89,6 @@ void Car::updatePosition()
 {
     int x = this->anchor.getX();
     int y = this->anchor.getY();
-
-    printf("%d\n", x);
 
     this->anchor.setX(x + 2);
     this->anchor.setY(y - 1);
