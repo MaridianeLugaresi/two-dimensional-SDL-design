@@ -36,23 +36,23 @@ void Car::drawBodyCar()
     points.push_back(Point(37 + this->anchor.getX(), 457 + this->anchor.getY()));
     points.push_back(Point(41 + this->anchor.getX(), 466 + this->anchor.getY()));
     points.push_back(Point(53 + this->anchor.getX(), 468 + this->anchor.getY()));
-    points.push_back(Point(57 + this->anchor.getX(), 448 + this->anchor.getY()));
-    points.push_back(Point(62 + this->anchor.getX(), 439 + this->anchor.getY()));
-    points.push_back(Point(91 + this->anchor.getX(), 439 + this->anchor.getY()));
-    points.push_back(Point(98 + this->anchor.getX(), 445 + this->anchor.getY()));
-    points.push_back(Point(104 + this->anchor.getX(), 451 + this->anchor.getY()));
-    points.push_back(Point(112 + this->anchor.getX(), 467 + this->anchor.getY()));
+    points.push_back(Point(53 + this->anchor.getX(), 448 + this->anchor.getY()));
+    points.push_back(Point(62 + this->anchor.getX(), 427 + this->anchor.getY()));
+    points.push_back(Point(91 + this->anchor.getX(), 425 + this->anchor.getY()));
+    points.push_back(Point(105 + this->anchor.getX(), 425 + this->anchor.getY()));
+    points.push_back(Point(115 + this->anchor.getX(), 440 + this->anchor.getY()));
+    points.push_back(Point(115 + this->anchor.getX(), 471 + this->anchor.getY()));
     points.push_back(Point(161 + this->anchor.getX(), 471 + this->anchor.getY()));
-    points.push_back(Point(235 + this->anchor.getX(), 475 + this->anchor.getY()));
-    points.push_back(Point(240 + this->anchor.getX(), 461 + this->anchor.getY()));
-    points.push_back(Point(245 + this->anchor.getX(), 448 + this->anchor.getY()));
+    points.push_back(Point(236 + this->anchor.getX(), 475 + this->anchor.getY()));
+    points.push_back(Point(237 + this->anchor.getX(), 461 + this->anchor.getY()));
+    points.push_back(Point(240 + this->anchor.getX(), 448 + this->anchor.getY()));
     points.push_back(Point(250 + this->anchor.getX(), 439 + this->anchor.getY()));
     points.push_back(Point(287 + this->anchor.getX(), 439 + this->anchor.getY()));
-    points.push_back(Point(291 + this->anchor.getX(), 443 + this->anchor.getY()));
-    points.push_back(Point(297 + this->anchor.getX(), 452 + this->anchor.getY()));
-    points.push_back(Point(301 + this->anchor.getX(), 467 + this->anchor.getY()));
-    points.push_back(Point(311 + this->anchor.getX(), 467 + this->anchor.getY()));
-    points.push_back(Point(324 + this->anchor.getX(), 455 + this->anchor.getY()));
+    points.push_back(Point(298 + this->anchor.getX(), 455 + this->anchor.getY()));
+    points.push_back(Point(298 + this->anchor.getX(), 480 + this->anchor.getY()));
+    points.push_back(Point(301 + this->anchor.getX(), 480 + this->anchor.getY()));
+    points.push_back(Point(311 + this->anchor.getX(), 480 + this->anchor.getY()));
+    points.push_back(Point(324 + this->anchor.getX(), 465 + this->anchor.getY()));
     points.push_back(Point(324 + this->anchor.getX(), 443 + this->anchor.getY()));
     points.push_back(Point(316 + this->anchor.getX(), 433 + this->anchor.getY()));
     points.push_back(Point(311 + this->anchor.getX(), 418 + this->anchor.getY()));
@@ -76,6 +76,12 @@ void Car::drawBodyCar()
 
 void Car::drawWheelsCar()
 {
+
+    Wheel wheelLeft = Wheel(Point(100 + this->anchor.getX(), 425 + this->anchor.getY()), 25, this->offsetWheel);
+    wheelLeft.draw();
+
+    Wheel wheelRight = Wheel(Point(265 + this->anchor.getX(), 345 + this->anchor.getY()), 25, this->offsetWheel);
+    wheelRight.draw();
 
 }
 
