@@ -12,7 +12,6 @@ class Ramp
     protected:
 
     private:
-        Line line;
         Point anchor;
         int angleRotation;
 };
