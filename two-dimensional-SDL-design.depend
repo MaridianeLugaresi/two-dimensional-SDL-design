@@ -452,7 +452,7 @@
 1726879278 c:\projetos\two-dimensional-sdl-design\include\ramp.h
 	<Line.h>
 
-1727630127 source:c:\projetos\two-dimensional-sdl-design\src\car.cpp
+1727635966 source:c:\projetos\two-dimensional-sdl-design\src\car.cpp
 	"Car.h"
 	<Line.h>
 	<Point.h>
@@ -464,7 +464,7 @@
 	<Wheel.h>
 	<Polygon.h>
 
-1727542407 c:\projetos\two-dimensional-sdl-design\include\car.h
+1727631668 c:\projetos\two-dimensional-sdl-design\include\car.h
 	<Point.h>
 	<Wheel.h>
 	<list>

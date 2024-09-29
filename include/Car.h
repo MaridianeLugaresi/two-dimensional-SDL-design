@@ -22,6 +22,7 @@ class Car
         void drawWheelsCar();
 
         void drawWindowsCar();
+        void drawWindshieldCar();
 
 };
 
