@@ -26,6 +26,7 @@ void Car::draw() {
     drawWheelsCar();
     drawWindowsCar();
     drawWindshieldCar();
+    drawRearWindshieldCar();
     updatePosition();
 }
 
@@ -156,6 +157,30 @@ void Car::drawWindshieldCar()
     Polygon windshieldInside = Polygon(points, this->angleRotation, Color(75,75,75));
     windshieldInside.rotate();
     windshieldInside.draw();
+}
+
+void Car::drawRearWindshieldCar()
+{
+    list<Point> points;
+
+    points.push_back(Point(12 + this->anchor.getX(), 362 + this->anchor.getY()));
+    points.push_back(Point(27 + this->anchor.getX(), 362 + this->anchor.getY()));
+    points.push_back(Point(25 + this->anchor.getX(), 392 + this->anchor.getY()));
+    points.push_back(Point(10 + this->anchor.getX(), 392 + this->anchor.getY()));
+
+    Polygon rearWindshield = Polygon(points, this->angleRotation, Color(0,0,0));
+    rearWindshield.rotate();
+    rearWindshield.draw();
+
+    points.clear();
+    points.push_back(Point(14 + this->anchor.getX(), 367 + this->anchor.getY()));
+    points.push_back(Point(24 + this->anchor.getX(), 367 + this->anchor.getY()));
+    points.push_back(Point(22 + this->anchor.getX(), 387 + this->anchor.getY()));
+    points.push_back(Point(12 + this->anchor.getX(), 387 + this->anchor.getY()));
+
+    Polygon rearWindshieldInside = Polygon(points, this->angleRotation, Color(75,75,75));
+    rearWindshieldInside.rotate();
+    rearWindshieldInside.draw();
 }
 
 void Car::drawWheelsCar()
