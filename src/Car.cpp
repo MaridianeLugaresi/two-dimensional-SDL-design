@@ -70,7 +70,7 @@ void Car::drawBodyCar()
     points.push_back(Point(39 + this->anchor.getX(), 349 + this->anchor.getY()));
     points.push_back(Point(32 + this->anchor.getX(), 397 + this->anchor.getY()));
 
-    Polygon polygon = Polygon(points, this->angleRotation, Color(140,140,140));
+    Polygon polygon = Polygon(points, this->angleRotation, Color(40,20,100));
     polygon.rotate();
     polygon.draw();
 }
@@ -88,9 +88,9 @@ void Car::drawWindowsCar()
     points.push_back(Point(14 + this->anchor.getX(), 300 + this->anchor.getY()));
     points.push_back(Point(24 + this->anchor.getX(), 290 + this->anchor.getY()));
 
-    Polygon windows = Polygon(points, this->angleRotation, Color(75,75,75));
-    windows.rotate();
-    windows.draw();
+    Polygon windowBorders = Polygon(points, this->angleRotation, Color(0,0,0));
+    windowBorders.rotate();
+    windowBorders.draw();
 
     //Inside window edges
     points.clear();
@@ -99,9 +99,9 @@ void Car::drawWindowsCar()
     points.push_back(Point(47 + this->anchor.getX(), 353 + this->anchor.getY()));
     points.push_back(Point(53 + this->anchor.getX(), 348 + this->anchor.getY()));
 
-    windows.setPoints(points);
-    windows.rotate();
-    windows.draw();
+    Polygon edgeOfWindow = Polygon(points, this->angleRotation, Color(75,75,75));
+    edgeOfWindow.rotate();
+    edgeOfWindow.draw();
 
     points.clear();
     points.push_back(Point(100 + this->anchor.getX(), 341 + this->anchor.getY()));
@@ -109,9 +109,9 @@ void Car::drawWindowsCar()
     points.push_back(Point(50 + this->anchor.getX(), 322 + this->anchor.getY()));
     points.push_back(Point(100 + this->anchor.getX(), 321 + this->anchor.getY()));
 
-    windows.setPoints(points);
-    windows.rotate();
-    windows.draw();
+    edgeOfWindow.setPoints(points);
+    edgeOfWindow.rotate();
+    edgeOfWindow.draw();
 
     points.clear();
     points.push_back(Point(146 + this->anchor.getX(), 314 + this->anchor.getY()));
@@ -119,18 +119,18 @@ void Car::drawWindowsCar()
     points.push_back(Point(96 + this->anchor.getX(), 295 + this->anchor.getY()));
     points.push_back(Point(146 + this->anchor.getX(), 294 + this->anchor.getY()));
 
-    windows.setPoints(points);
-    windows.rotate();
-    windows.draw();
+    edgeOfWindow.setPoints(points);
+    edgeOfWindow.rotate();
+    edgeOfWindow.draw();
 
     points.clear();
     points.push_back(Point(140 + this->anchor.getX(), 295 + this->anchor.getY()));
     points.push_back(Point(155 + this->anchor.getX(), 316 + this->anchor.getY()));
     points.push_back(Point(140 + this->anchor.getX(), 315 + this->anchor.getY()));
 
-    windows.setPoints(points);
-    windows.rotate();
-    windows.draw();
+    edgeOfWindow.setPoints(points);
+    edgeOfWindow.rotate();
+    edgeOfWindow.draw();
 }
 
 void Car::drawWheelsCar()
