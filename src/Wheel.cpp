@@ -11,7 +11,8 @@ Wheel::Wheel(Point anchor, int radius, int offset)
     this->offset = offset;
     this->posX = anchor.getX();
     this->posY = anchor.getY();
-    this->circle = Circle(anchor.getX(), anchor.getY(), radius);
+    this->inCircle = Circle(anchor.getX(), anchor.getY(), radius);
+    this->outCircle = Circle(anchor.getX(), anchor.getY(), radius + 5);
     this->firstRadius = Line(Point(this->posX, this->posY - radius), Point(this->posX, this->posY + radius),Color(0,0,0));
     this->secondRadius = Line(Point(this->posX - radius, this->posY), Point(this->posX + radius, this->posY),Color(0,0,0));
 }
@@ -25,7 +26,8 @@ void Wheel::draw()
 {
     this->firstRadius.draw();
     this->secondRadius.draw();
-    this->circle.drawBresenhamCircle();
+    this->inCircle.drawBresenhamCircle();
+    this->outCircle.drawBresenhamCircle();
 
 }
 

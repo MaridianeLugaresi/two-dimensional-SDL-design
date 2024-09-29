@@ -18,7 +18,8 @@ class Wheel
         int posX;
         int posY;
         Point anchor;
-        Circle circle;
+        Circle inCircle;
+        Circle outCircle;
         Line firstRadius;
         Line secondRadius;
         int offset;
