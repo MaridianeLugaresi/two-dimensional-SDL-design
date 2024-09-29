@@ -12,13 +12,13 @@ class Polygon
         virtual ~Polygon();
         void draw();
         void rotate();
+        void setPoints(list<Point> points);
 
     protected:
 
     private:
         list<Point> points;
         int degrees;
-        void setPoints(list<Point> points);
 };
 
 #endif // POLYGON_H

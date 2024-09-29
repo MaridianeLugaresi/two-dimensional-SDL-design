@@ -21,6 +21,8 @@ class Car
         void drawBodyCar();
         void drawWheelsCar();
 
+        void drawWindowsCar();
+
 };
 
 #endif // CAR_H
