@@ -88,7 +88,7 @@ void Car::drawWindowsCar()
     points.push_back(Point(14 + this->anchor.getX(), 300 + this->anchor.getY()));
     points.push_back(Point(24 + this->anchor.getX(), 290 + this->anchor.getY()));
 
-    Polygon windows = Polygon(points, this->angleRotation);
+    Polygon windows = Polygon(points, this->angleRotation, Color(75,75,75));
     windows.rotate();
     windows.draw();
 
