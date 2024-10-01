@@ -1,21 +1,74 @@
 #include "Circle.h"
 #include<Line.h>
+#include<Point.h>
+#include<Polygon.h>
+#include<stdio.h>
+#include<Circle.h>
+#include <Color.h>
+#include <unistd.h>
+#include <Wheel.h>
+#include<Polygon.h>
+#include<stack>
+#include "Context.h"
 
 Circle::Circle()
 {
 
 }
 
-Circle::Circle(int x, int y, int radius)
+Circle::Circle(Point anchor, int radius)
 {
-    this->posX = x;
-    this->posY = y;
+    this->anchor = anchor;
     this->radius = radius;
 }
 
 Circle::~Circle()
 {
     //dtor
+}
+
+void Circle::draw()
+{
+    drawBresenhamCircle();
+    floodFill();
+}
+
+void Circle::floodFill()
+{
+    Line line = Line();
+    Color color = Color();
+    SDL_Surface * window_surface = Context::getInstance()->getWindowSurface();
+
+    if (this->anchor.getY() < 0 || this->anchor.getY() > window_surface->h - 1 || this->anchor.getX() < 0 || this->anchor.getX() > window_surface->w - 1)
+        return;
+
+    stack<Point> st;
+    st.push(getPoint(this->anchor.getX(), this->anchor.getY()));
+
+    while (st.size() > 0) {
+        Point p = st.top();
+        st.pop();
+        int x = p.getX();
+        int y = p.getY();
+        if (y < 0 || y > window_surface->h - 1 || x < 0 || x > window_surface->w - 1)
+            continue;
+
+        if (line.getPixel(x, y) == line.getPixel(this->anchor.getX(), this->anchor.getY())) {
+            line.setPixel(x, y, color.RGB(255, 0, 0));
+            st.push(getPoint(x + 1, y));
+            st.push(getPoint(x - 1, y));
+            st.push(getPoint(x, y + 1));
+            st.push(getPoint(x, y - 1));
+        }
+    }
+}
+
+Point Circle::getPoint(int x, int y)
+{
+    Point p;
+    p.setX(x);
+    p.setY(y);
+    return p;
 }
 
 void Circle::displayBresenhamCircle(int x, int y)
@@ -29,14 +82,14 @@ void Circle::displayBresenhamCircle(int x, int y)
     Line line7;
     Line line8;
 
-    line1.setPixel(this->posX+x, this->posY+y, 0, 0, 0);
-    line2.setPixel(this->posX-x, this->posY+y, 0, 0, 0);
-    line3.setPixel(this->posX+x, this->posY-y, 0, 0, 0);
-    line4.setPixel(this->posX-x, this->posY-y, 0, 0, 0);
-    line5.setPixel(this->posX+y, this->posY+x, 0, 0, 0);
-    line6.setPixel(this->posX-y, this->posY+x, 0, 0, 0);
-    line7.setPixel(this->posX+y, this->posY-x, 0, 0, 0);
-    line8.setPixel(this->posX-y, this->posY-x, 0, 0, 0);
+    line1.setPixel(this->anchor.getX()+x, this->anchor.getY()+y, 0, 0, 0);
+    line2.setPixel(this->anchor.getX()-x, this->anchor.getY()+y, 0, 0, 0);
+    line3.setPixel(this->anchor.getX()+x, this->anchor.getY()-y, 0, 0, 0);
+    line4.setPixel(this->anchor.getX()-x, this->anchor.getY()-y, 0, 0, 0);
+    line5.setPixel(this->anchor.getX()+y, this->anchor.getY()+x, 0, 0, 0);
+    line6.setPixel(this->anchor.getX()-y, this->anchor.getY()+x, 0, 0, 0);
+    line7.setPixel(this->anchor.getX()+y, this->anchor.getY()-x, 0, 0, 0);
+    line8.setPixel(this->anchor.getX()-y, this->anchor.getY()-x, 0, 0, 0);
 }
 
 void Circle::drawBresenhamCircle()

@@ -13,7 +13,7 @@ Car::Car()
 {
     this->anchor = Point(0,0);
     this->angleRotation = 330;
-    this->offsetWheel = 10;
+    this->offsetWheel = 0;
 }
 
 Car::~Car()
@@ -187,9 +187,11 @@ void Car::drawWheelsCar()
 {
 
     Wheel wheelLeft = Wheel(Point(95 + this->anchor.getX(), 425 + this->anchor.getY()), 25, this->offsetWheel);
+    wheelLeft.rotate();
     wheelLeft.draw();
 
     Wheel wheelRight = Wheel(Point(260 + this->anchor.getX(), 340 + this->anchor.getY()), 25, this->offsetWheel);
+    wheelRight.rotate();
     wheelRight.draw();
 
 }
@@ -201,6 +203,12 @@ void Car::updatePosition()
 
     this->anchor.setX(x + 2);
     this->anchor.setY(y - 1);
+
+    this->offsetWheel += 2;
+    if(this->offsetWheel > 25)
+    {
+        this->offsetWheel = 0;
+    }
 
     if(x > 300)
     {

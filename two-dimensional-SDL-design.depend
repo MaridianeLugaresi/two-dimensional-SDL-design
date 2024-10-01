@@ -508,9 +508,9 @@
 1727047535 c:\projects\two-dimensional-sdl-design\include\color.h
 	<SDL2/SDL.h>
 
-1727480151 c:\projects\two-dimensional-sdl-design\include\point.h
+1727640210 c:\projects\two-dimensional-sdl-design\include\point.h
 
-1727552140 c:\projects\two-dimensional-sdl-design\include\line.h
+1727641035 c:\projects\two-dimensional-sdl-design\include\line.h
 	<Point.h>
 	<Color.h>
 	<SDL2/SDL.h>
@@ -518,12 +518,11 @@
 1727638270 c:\projects\two-dimensional-sdl-design\include\ramp.h
 	<Line.h>
 
-1727638310 c:\projects\two-dimensional-sdl-design\include\car.h
+1727639866 c:\projects\two-dimensional-sdl-design\include\car.h
 	<Point.h>
 	<Wheel.h>
-	<list>
 
-1727638310 source:c:\projects\two-dimensional-sdl-design\src\car.cpp
+1727740426 source:c:\projects\two-dimensional-sdl-design\src\car.cpp
 	"Car.h"
 	<Line.h>
 	<Point.h>
@@ -540,11 +539,22 @@
 	<list>
 	<Color.h>
 
-1727266385 source:c:\projects\two-dimensional-sdl-design\src\circle.cpp
+1727659202 source:c:\projects\two-dimensional-sdl-design\src\circle.cpp
 	"Circle.h"
 	<Line.h>
+	<Point.h>
+	<Polygon.h>
+	<stdio.h>
+	<Circle.h>
+	<Color.h>
+	<unistd.h>
+	<Wheel.h>
+	<Polygon.h>
+	<stack>
+	"Context.h"
 
-1727266406 c:\projects\two-dimensional-sdl-design\include\circle.h
+1727659046 c:\projects\two-dimensional-sdl-design\include\circle.h
+	<Point.h>
 
 1726420525 source:c:\projects\two-dimensional-sdl-design\src\color.cpp
 	"Color.h"
@@ -553,13 +563,13 @@
 1726420525 source:c:\projects\two-dimensional-sdl-design\src\context.cpp
 	"Context.h"
 
-1727480151 source:c:\projects\two-dimensional-sdl-design\src\line.cpp
+1727737789 source:c:\projects\two-dimensional-sdl-design\src\line.cpp
 	"Line.h"
 	"Context.h"
 	<math.h>
 	<unistd.h>
 
-1727480151 source:c:\projects\two-dimensional-sdl-design\src\point.cpp
+1727658533 source:c:\projects\two-dimensional-sdl-design\src\point.cpp
 	"Point.h"
 	<Radians.h>
 	<cmath>
@@ -567,7 +577,7 @@
 
 1726530511 c:\projects\two-dimensional-sdl-design\include\radians.h
 
-1727636587 source:c:\projects\two-dimensional-sdl-design\src\polygon.cpp
+1727643390 source:c:\projects\two-dimensional-sdl-design\src\polygon.cpp
 	"Polygon.h"
 	<Point.h>
 	<list>
@@ -624,7 +634,7 @@
 1727050702 c:\projects\two-dimensional-sdl-design\include\triangle.h
 	<Line.h>
 
-1727636483 source:c:\projects\two-dimensional-sdl-design\src\wheel.cpp
+1727741102 source:c:\projects\two-dimensional-sdl-design\src\wheel.cpp
 	"Wheel.h"
 	<Circle.h>
 	<Point.h>

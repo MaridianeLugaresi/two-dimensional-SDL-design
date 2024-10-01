@@ -20,6 +20,8 @@ class Line
         void bezierCurve(int x[] , int y[], bool points, Uint32 color);
         void drawWuLine(int x0, int y0, int x1, int y1, Color color);
         void setPixel(int x, int y, Color color);
+        Uint32 getPixel(int x, int y);
+        void setPixel(int x, int y, Uint32 cor);
 
     protected:
 
@@ -27,8 +29,6 @@ class Line
         Color color;
         int antialias = 0;
         void setPixel(int x, int y, int r, int g, int b, int a);
-        void setPixel(int x, int y, Uint32 cor);
-        Uint32 getPixel(int x, int y);
         void bresenham(int x1, int y1, int x2, int y2, int r, int g, int b);
         void bezierTarget(int x, int y, Uint32 color);
 

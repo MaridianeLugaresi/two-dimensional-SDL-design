@@ -67,4 +67,3 @@ void Point::rotate(double degrees) {
     this->setY(testeX * sin(radians.degrees) + testeY * cos(radians.degrees));
 
 }
-

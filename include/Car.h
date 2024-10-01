@@ -2,7 +2,6 @@
 #define CAR_H
 #include<Point.h>
 #include<Wheel.h>
-#include<list>
 
 class Car
 {
