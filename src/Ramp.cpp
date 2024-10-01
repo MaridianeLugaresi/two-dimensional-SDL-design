@@ -20,7 +20,7 @@ void Ramp::draw() {
     points.push_back(Point(this->anchor.getX() + 589, this->anchor.getY() - 299));
     points.push_back(Point(this->anchor.getX() + 589, this->anchor.getY()));
 
-    Polygon polygon = Polygon(points, this->angleRotation, Color(226,226,226));
+    Polygon polygon = Polygon(points, this->angleRotation, Color(160,160,160));
     polygon.rotate();
     polygon.draw();
 

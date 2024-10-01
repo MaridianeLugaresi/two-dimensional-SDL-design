@@ -522,7 +522,7 @@
 	<Point.h>
 	<Wheel.h>
 
-1727740426 source:c:\projects\two-dimensional-sdl-design\src\car.cpp
+1727742123 source:c:\projects\two-dimensional-sdl-design\src\car.cpp
 	"Car.h"
 	<Line.h>
 	<Point.h>
@@ -634,7 +634,7 @@
 1727050702 c:\projects\two-dimensional-sdl-design\include\triangle.h
 	<Line.h>
 
-1727741102 source:c:\projects\two-dimensional-sdl-design\src\wheel.cpp
+1727742040 source:c:\projects\two-dimensional-sdl-design\src\wheel.cpp
 	"Wheel.h"
 	<Circle.h>
 	<Point.h>
