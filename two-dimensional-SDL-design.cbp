@@ -52,7 +52,6 @@
 		<Unit filename="include/Polygon.h" />
 		<Unit filename="include/Radians.h" />
 		<Unit filename="include/Ramp.h" />
-		<Unit filename="include/Rectangle.h" />
 		<Unit filename="include/Wheel.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Car.cpp" />
@@ -64,7 +63,6 @@
 		<Unit filename="src/Polygon.cpp" />
 		<Unit filename="src/Radians.cpp" />
 		<Unit filename="src/Ramp.cpp" />
-		<Unit filename="src/Rectangle.cpp" />
 		<Unit filename="src/Triangle.cpp" />
 		<Unit filename="src/Wheel.cpp" />
 		<Extensions />
