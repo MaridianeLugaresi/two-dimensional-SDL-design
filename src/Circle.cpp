@@ -16,10 +16,11 @@ Circle::Circle()
 
 }
 
-Circle::Circle(Point anchor, int radius)
+Circle::Circle(Point anchor, int radius, Color color)
 {
     this->anchor = anchor;
     this->radius = radius;
+    this->color = color;
 }
 
 Circle::~Circle()
@@ -37,6 +38,7 @@ void Circle::floodFill()
 {
     Line line = Line();
     Color color = Color();
+    Uint32 backupColor = getPixel(anchor.getX(), anchor.getY());
     SDL_Surface * window_surface = Context::getInstance()->getWindowSurface();
 
     if (this->anchor.getY() < 0 || this->anchor.getY() > window_surface->h - 1 || this->anchor.getX() < 0 || this->anchor.getX() > window_surface->w - 1)
@@ -53,14 +55,28 @@ void Circle::floodFill()
         if (y < 0 || y > window_surface->h - 1 || x < 0 || x > window_surface->w - 1)
             continue;
 
-        if (line.getPixel(x, y) == line.getPixel(this->anchor.getX(), this->anchor.getY())) {
-            line.setPixel(x, y, color.RGB(255, 0, 0));
+        if (getPixel(x, y) == backupColor) {
+            line.setPixel(x, y, this->color);
             st.push(getPoint(x + 1, y));
             st.push(getPoint(x - 1, y));
             st.push(getPoint(x, y + 1));
             st.push(getPoint(x, y - 1));
         }
     }
+
+    printf("---------------------------------------\n");
+
+}
+
+Uint32 Circle::getPixel(int x, int y)
+{
+    SDL_Surface * window_surface = Context::getInstance()->getWindowSurface();
+    unsigned int * pixels = (unsigned int *) window_surface->pixels;
+
+    if((x>=0 && x<=window_surface->w) && (y>=0 && y<=window_surface->h))
+        return pixels[x + window_surface->w * y];
+    else
+        return -1;
 }
 
 Point Circle::getPoint(int x, int y)

@@ -185,15 +185,21 @@ void Car::drawRearWindshieldCar()
 
 void Car::drawWheelsCar()
 {
-
-    Wheel wheelLeft = Wheel(Point(95 + this->anchor.getX(), 425 + this->anchor.getY()), 25, this->offsetWheel);
+    Wheel wheelLeft = Wheel(Point(95 + this->anchor.getX(), 425 + this->anchor.getY()),
+                            25,
+                            this->offsetWheel,
+                            Color(30,30,30),
+                            Color(0,0,0));
     wheelLeft.rotate();
     wheelLeft.draw();
 
-    Wheel wheelRight = Wheel(Point(260 + this->anchor.getX(), 340 + this->anchor.getY()), 25, this->offsetWheel);
+    Wheel wheelRight = Wheel(Point(260 + this->anchor.getX(), 340 + this->anchor.getY()),
+                             25,
+                             this->offsetWheel,
+                             Color(30,30,30),
+                             Color(0,0,0));
     wheelRight.rotate();
     wheelRight.draw();
-
 }
 
 void Car::updatePosition()

@@ -5,16 +5,16 @@
 #include <stdio.h>
 #include<cmath>
 
-Wheel::Wheel(Point anchor, int radius, int offset)
+Wheel::Wheel(Point anchor, int radius, int offset, Color wheelColor, Color radiusColor)
 {
     this->anchor = anchor;
     this->offset = offset;
     this->posX = anchor.getX();
     this->posY = anchor.getY();
-    this->inCircle = Circle(anchor, radius);
-    this->outCircle = Circle(anchor, radius + 5);
-    this->firstRadius = Line(Point(this->posX, this->posY - radius), Point(this->posX, this->posY + radius),Color(0,0,0));
-    this->secondRadius = Line(Point(this->posX - radius, this->posY), Point(this->posX + radius, this->posY),Color(0,0,0));
+    this->inCircle = Circle(anchor, radius, Color(255,255,255));
+    this->outCircle = Circle(anchor, radius + 5, wheelColor);
+    this->firstRadius = Line(Point(this->posX, this->posY - radius), Point(this->posX, this->posY + radius), radiusColor);
+    this->secondRadius = Line(Point(this->posX - radius, this->posY), Point(this->posX + radius, this->posY), radiusColor);
 }
 
 Wheel::~Wheel()
@@ -24,10 +24,10 @@ Wheel::~Wheel()
 
 void Wheel::draw()
 {
+    this->outCircle.draw();
+    this->inCircle.draw();
     this->firstRadius.draw();
     this->secondRadius.draw();
-    this->inCircle.draw();
-    this->outCircle.draw();
 }
 
 void Wheel::rotate()
