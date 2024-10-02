@@ -64,12 +64,12 @@ void Car::drawBodyCar()
     points.push_back(Point(284 + this->anchor.getX(), 408 + this->anchor.getY()));
     points.push_back(Point(269 + this->anchor.getX(), 406 + this->anchor.getY()));
     points.push_back(Point(236 + this->anchor.getX(), 402 + this->anchor.getY()));
-    points.push_back(Point(203 + this->anchor.getX(), 356 + this->anchor.getY()));
-    points.push_back(Point(189 + this->anchor.getX(), 350 + this->anchor.getY()));
-    points.push_back(Point(169 + this->anchor.getX(), 347 + this->anchor.getY()));
-    points.push_back(Point(62 + this->anchor.getX(), 345 + this->anchor.getY()));
-    points.push_back(Point(58 + this->anchor.getX(), 349 + this->anchor.getY()));
-    points.push_back(Point(39 + this->anchor.getX(), 349 + this->anchor.getY()));
+    points.push_back(Point(203 + this->anchor.getX(), 376 + this->anchor.getY()));
+    points.push_back(Point(189 + this->anchor.getX(), 370 + this->anchor.getY()));
+    points.push_back(Point(169 + this->anchor.getX(), 367 + this->anchor.getY()));
+    points.push_back(Point(62 + this->anchor.getX(), 365 + this->anchor.getY()));
+    points.push_back(Point(58 + this->anchor.getX(), 369 + this->anchor.getY()));
+    points.push_back(Point(39 + this->anchor.getX(), 369 + this->anchor.getY()));
     points.push_back(Point(32 + this->anchor.getX(), 397 + this->anchor.getY()));
 
     Polygon polygon = Polygon(points, this->angleRotation, Color(40,20,100));
@@ -82,13 +82,13 @@ void Car::drawWindowsCar()
     list<Point> points;
 
     //Windows borders
-    points.push_back(Point(140 + this->anchor.getX(), 290 + this->anchor.getY()));
-    points.push_back(Point(160 + this->anchor.getX(), 320 + this->anchor.getY()));
-    points.push_back(Point(140 + this->anchor.getX(), 320 + this->anchor.getY()));
-    points.push_back(Point(24 + this->anchor.getX(), 320 + this->anchor.getY()));
-    points.push_back(Point(14 + this->anchor.getX(), 310 + this->anchor.getY()));
-    points.push_back(Point(14 + this->anchor.getX(), 300 + this->anchor.getY()));
-    points.push_back(Point(24 + this->anchor.getX(), 290 + this->anchor.getY()));
+    points.push_back(Point(140 + this->anchor.getX(), 310 + this->anchor.getY()));
+    points.push_back(Point(160 + this->anchor.getX(), 340 + this->anchor.getY()));
+    points.push_back(Point(140 + this->anchor.getX(), 340 + this->anchor.getY()));
+    points.push_back(Point(24 + this->anchor.getX(), 340 + this->anchor.getY()));
+    points.push_back(Point(14 + this->anchor.getX(), 330 + this->anchor.getY()));
+    points.push_back(Point(14 + this->anchor.getX(), 320 + this->anchor.getY()));
+    points.push_back(Point(24 + this->anchor.getX(), 310 + this->anchor.getY()));
 
     Polygon windowBorders = Polygon(points, this->angleRotation, Color(0,0,0));
     windowBorders.rotate();
@@ -96,39 +96,39 @@ void Car::drawWindowsCar()
 
     //Inside window edges
     points.clear();
+    points.push_back(Point(53 + this->anchor.getX(), 388 + this->anchor.getY()));
+    points.push_back(Point(47 + this->anchor.getX(), 383 + this->anchor.getY()));
+    points.push_back(Point(47 + this->anchor.getX(), 373 + this->anchor.getY()));
     points.push_back(Point(53 + this->anchor.getX(), 368 + this->anchor.getY()));
-    points.push_back(Point(47 + this->anchor.getX(), 363 + this->anchor.getY()));
-    points.push_back(Point(47 + this->anchor.getX(), 353 + this->anchor.getY()));
-    points.push_back(Point(53 + this->anchor.getX(), 348 + this->anchor.getY()));
 
     Polygon edgeOfWindow = Polygon(points, this->angleRotation, Color(75,75,75));
     edgeOfWindow.rotate();
     edgeOfWindow.draw();
 
     points.clear();
-    points.push_back(Point(100 + this->anchor.getX(), 341 + this->anchor.getY()));
+    points.push_back(Point(100 + this->anchor.getX(), 361 + this->anchor.getY()));
+    points.push_back(Point(50 + this->anchor.getX(), 362 + this->anchor.getY()));
     points.push_back(Point(50 + this->anchor.getX(), 342 + this->anchor.getY()));
-    points.push_back(Point(50 + this->anchor.getX(), 322 + this->anchor.getY()));
-    points.push_back(Point(100 + this->anchor.getX(), 321 + this->anchor.getY()));
+    points.push_back(Point(100 + this->anchor.getX(), 341 + this->anchor.getY()));
 
     edgeOfWindow.setPoints(points);
     edgeOfWindow.rotate();
     edgeOfWindow.draw();
 
     points.clear();
-    points.push_back(Point(146 + this->anchor.getX(), 314 + this->anchor.getY()));
+    points.push_back(Point(146 + this->anchor.getX(), 334 + this->anchor.getY()));
+    points.push_back(Point(96 + this->anchor.getX(), 335 + this->anchor.getY()));
     points.push_back(Point(96 + this->anchor.getX(), 315 + this->anchor.getY()));
-    points.push_back(Point(96 + this->anchor.getX(), 295 + this->anchor.getY()));
-    points.push_back(Point(146 + this->anchor.getX(), 294 + this->anchor.getY()));
+    points.push_back(Point(146 + this->anchor.getX(), 314 + this->anchor.getY()));
 
     edgeOfWindow.setPoints(points);
     edgeOfWindow.rotate();
     edgeOfWindow.draw();
 
     points.clear();
-    points.push_back(Point(140 + this->anchor.getX(), 295 + this->anchor.getY()));
-    points.push_back(Point(155 + this->anchor.getX(), 316 + this->anchor.getY()));
     points.push_back(Point(140 + this->anchor.getX(), 315 + this->anchor.getY()));
+    points.push_back(Point(155 + this->anchor.getX(), 336 + this->anchor.getY()));
+    points.push_back(Point(140 + this->anchor.getX(), 335 + this->anchor.getY()));
 
     edgeOfWindow.setPoints(points);
     edgeOfWindow.rotate();
@@ -139,20 +139,20 @@ void Car::drawWindshieldCar()
 {
     list<Point> points;
 
-    points.push_back(Point(160 + this->anchor.getX(), 280 + this->anchor.getY()));
-    points.push_back(Point(145 + this->anchor.getX(), 280 + this->anchor.getY()));
-    points.push_back(Point(165 + this->anchor.getX(), 310 + this->anchor.getY()));
-    points.push_back(Point(210 + this->anchor.getX(), 310 + this->anchor.getY()));
+    points.push_back(Point(160 + this->anchor.getX(), 300 + this->anchor.getY()));
+    points.push_back(Point(145 + this->anchor.getX(), 300 + this->anchor.getY()));
+    points.push_back(Point(165 + this->anchor.getX(), 330 + this->anchor.getY()));
+    points.push_back(Point(210 + this->anchor.getX(), 330 + this->anchor.getY()));
 
     Polygon windshield = Polygon(points, this->angleRotation, Color(0,0,0));
     windshield.rotate();
     windshield.draw();
 
     points.clear();
-    points.push_back(Point(150 + this->anchor.getX(), 280 + this->anchor.getY()));
-    points.push_back(Point(145 + this->anchor.getX(), 280 + this->anchor.getY()));
-    points.push_back(Point(165 + this->anchor.getX(), 310 + this->anchor.getY()));
-    points.push_back(Point(205 + this->anchor.getX(), 310 + this->anchor.getY()));
+    points.push_back(Point(150 + this->anchor.getX(), 300 + this->anchor.getY()));
+    points.push_back(Point(145 + this->anchor.getX(), 300 + this->anchor.getY()));
+    points.push_back(Point(165 + this->anchor.getX(), 330 + this->anchor.getY()));
+    points.push_back(Point(205 + this->anchor.getX(), 330 + this->anchor.getY()));
 
     Polygon windshieldInside = Polygon(points, this->angleRotation, Color(75,75,75));
     windshieldInside.rotate();
@@ -163,20 +163,20 @@ void Car::drawRearWindshieldCar()
 {
     list<Point> points;
 
-    points.push_back(Point(12 + this->anchor.getX(), 362 + this->anchor.getY()));
-    points.push_back(Point(27 + this->anchor.getX(), 362 + this->anchor.getY()));
-    points.push_back(Point(25 + this->anchor.getX(), 392 + this->anchor.getY()));
-    points.push_back(Point(10 + this->anchor.getX(), 392 + this->anchor.getY()));
+    points.push_back(Point(20 + this->anchor.getX(), 380 + this->anchor.getY()));
+    points.push_back(Point(31 + this->anchor.getX(), 380 + this->anchor.getY()));
+    points.push_back(Point(29 + this->anchor.getX(), 410 + this->anchor.getY()));
+    points.push_back(Point(18 + this->anchor.getX(), 410 + this->anchor.getY()));
 
     Polygon rearWindshield = Polygon(points, this->angleRotation, Color(0,0,0));
     rearWindshield.rotate();
     rearWindshield.draw();
 
     points.clear();
-    points.push_back(Point(14 + this->anchor.getX(), 367 + this->anchor.getY()));
-    points.push_back(Point(24 + this->anchor.getX(), 367 + this->anchor.getY()));
-    points.push_back(Point(22 + this->anchor.getX(), 387 + this->anchor.getY()));
-    points.push_back(Point(12 + this->anchor.getX(), 387 + this->anchor.getY()));
+    points.push_back(Point(22 + this->anchor.getX(), 385 + this->anchor.getY()));
+    points.push_back(Point(28 + this->anchor.getX(), 385 + this->anchor.getY()));
+    points.push_back(Point(26 + this->anchor.getX(), 405 + this->anchor.getY()));
+    points.push_back(Point(20 + this->anchor.getX(), 405 + this->anchor.getY()));
 
     Polygon rearWindshieldInside = Polygon(points, this->angleRotation, Color(75,75,75));
     rearWindshieldInside.rotate();
