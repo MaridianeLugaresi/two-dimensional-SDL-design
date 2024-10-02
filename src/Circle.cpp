@@ -63,9 +63,6 @@ void Circle::floodFill()
             st.push(getPoint(x, y - 1));
         }
     }
-
-    printf("---------------------------------------\n");
-
 }
 
 Uint32 Circle::getPixel(int x, int y)
