@@ -11,7 +11,7 @@ Wheel::Wheel(Point anchor, int radius, int offset, Color wheelColor, Color radiu
     this->offset = offset;
     this->posX = anchor.getX();
     this->posY = anchor.getY();
-    this->inCircle = Circle(anchor, radius, Color(255,255,255));
+    this->inCircle = Circle(anchor, radius, Color(200,200,200));
     this->outCircle = Circle(anchor, radius + 5, wheelColor);
     this->firstRadius = Line(Point(this->posX, this->posY - radius), Point(this->posX, this->posY + radius), radiusColor);
     this->secondRadius = Line(Point(this->posX - radius, this->posY), Point(this->posX + radius, this->posY), radiusColor);

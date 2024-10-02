@@ -3,6 +3,7 @@
 #include<list>
 #include<Line.h>
 #include<stdio.h>
+#include "Context.h"
 
 Polygon::Polygon(list<Point> points, int degrees, Color color)
 {
@@ -74,14 +75,16 @@ void Polygon::draw()
 
 void Polygon::scanFill()
 {
-    int le[480], re[480], i, j;
+    SDL_Surface * window_surface = Context::getInstance()->getWindowSurface();
+
+    int le[window_surface->h], re[window_surface->h], i, j;
     bool firstPoint = true;
     Point first;
     Point before;
     Line line;
 
-    for (i = 0; i < 480; i++) {
-        le[i] = 640;
+    for (i = 0; i < window_surface->h; i++) {
+        le[i] = window_surface->w;
         re[i] = 0;
     }
 
@@ -110,7 +113,7 @@ void Polygon::scanFill()
                  first.getY(),
                  le, re);
 
-    for (j = 0; j < 480; j++)
+    for (j = 0; j < window_surface->h; j++)
     {
         if (le[j] <= re[j]) {
             for (i = le[j]; i < re[j]; i++) {
